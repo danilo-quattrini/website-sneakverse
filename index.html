@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Zapatillas Streetwear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo de la Tienda" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#novedades">Novedades</a></li>
+                <li><a href="#popular">Más Populares</a></li>
+                <li><a href="#ofertas">Ofertas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Video de Fondo -->
+    <section class="video-section">
+        <video autoplay muted loop class="background-video">
+            <source src="video.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <div class="video-overlay">
+            <h1>Explora las Mejores Zapatillas Streetwear</h1>
+            <button onclick="scrollToProducts()">Ver Productos</button>
+        </div>
+    </section>
+
+    <section id="productos" class="productos">
+        <!-- Productos generados dinámicamente con JavaScript -->
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
