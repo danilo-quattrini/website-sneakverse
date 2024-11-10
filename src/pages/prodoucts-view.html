@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Name of the shoe</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/product.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navbar of the webpage where we saw our logo and all the menus -->
+    <header>
+      <img src="../public/assets/img/logo.png" alt="Logo de la Tienda" class="logo">
+      <nav>
+          <ul>
+              <li><a>Novità</a></li>
+              <li><a>Populars</a></li>
+              <li><a>Sales</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <!-- We are creating the div for containing the images of the shoes and the description part -->
+    <div class="product-container">
+      <!-- Section where u are going to see all the images on the left side of the webpage-->
+      <div class="image-container">
+        <img src="../../public/assets/img/airJordan1-1" alt="Main shoe" class="main-image" id="mainImage">
+        <!-- Here is where there are all the thumbnails -->
+        <div class="thumbnail-container">
+          <img src="../../public/assets/img/airJordan1-1" alt="Shoe Image 1" class="thumbnail"
+          onclick="changeImage('../../public/assets/img/airJordan1-1.webp')">
+          <img src="../../public/assets/img/airJordan1-2.webp" alt="Shoe Image 2" class="thumbnail" onclick="changeImage('../../public/assets/img/airJordan1-2.webp')">
+          <img src="../../public/assets/img/airJordan1-6.webp" alt="Shoe Image 6" class="thumbnail"
+          onclick="changeImage('../../public/assets/img/airJordan1-6.webp')">
+          <img src="../../public/assets/img/airJordan1-4.webp" alt="Shoe Image 4" class="thumbnail"
+          onclick="changeImage('../../public/assets/img/airJordan1-4.webp')">
+          <img src="../../public/assets/img/airJordan1-3.webp" alt="Shoe Image 3" class="thumbnail"
+          onclick="changeImage('../../public/assets/img/airJordan1-3.webp')">
+          <img src="../../public/assets/img/airJordan1-5.webp" alt="Shoe Image 5" class="thumbnail"
+          onclick="changeImage('../../public/assets/img/airJordan1-5.webp')">
+        </div>
+      </div>
+
+      <!-- Right Side: Product Details -->
+      <div class="product-details">
+        <h1 class="product-name">Stylish Running Shoe</h1>
+        <p class="product-price">$99.99</p>
+
+        <!-- Color Options -->
+        <div class="product-color">
+          <p>Color:</p>
+          <div class="color-swatch" style="background-color: #333;"></div>
+          <div class="color-swatch" style="background-color: #8B4513;"></div>
+          <div class="color-swatch" style="background-color: #FFA07A;"></div>
+        </div>
+
+        <!-- Size Options -->
+        <div class="product-sizes">
+          <p>Sizes:</p>
+          <button class="size-option">7</button>
+          <button class="size-option">8</button>
+          <button class="size-option">9</button>
+          <button class="size-option">10</button>
+        </div>
+
+        <!-- Add to Cart Button -->
+        <button class="add-to-cart">Add to Cart</button>
+
+        <!-- Review Section -->
+        <div class="review-section">
+          <h3>Customer Reviews</h3>
+          <p>★★★★☆</p>
+          <p>"Great shoe! Very comfortable for running."</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Creating the script fot adding the way to change shoe after select one of them -->
+     <script>
+        function changeImage(imageSrc){
+          document.getElementById("mainImage").src = imageSrc;
+        }
+     </script>
+  </body>
+</html>
