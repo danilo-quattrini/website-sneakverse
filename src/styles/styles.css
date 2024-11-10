@@ -5,10 +5,15 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;  /* Asegura que toda la página tenga altura completa */
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f5f5f5;
     color: #333;
+    overflow-y: auto; /* Permite el desplazamiento vertical en toda la página */
 }
 
 header {
@@ -103,4 +108,28 @@ nav a:hover {
 
 .producto-card:hover {
     transform: scale(1.05);
+}
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: 2rem;  /* Asegura que el footer se separe un poco del contenido */
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Barra de desplazamiento personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff6600;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff3300;
 }
