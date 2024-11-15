@@ -5,32 +5,25 @@
 
 /*Table styling */
 .table-container {
-    max-height: 400px;
-    overflow-y: auto;
-    border: 1px solid #dee2e6;
-    border-radius: 8px;
+    max-width: 100%;
+    overflow-x: auto;
+    border: 1px solid #ddd;
 }
-
 table {
     width: 100%;
-    margin-bottom: 0;
-    border-collapse: separate;
-    border-spacing: 0;
+    border-collapse: collapse;
+    min-width: 500px;
+    text-align: left;
 }
-
 th, td {
-    white-space: nowrap;
+    padding-right: 24px;
+    border: 1px solid #ddd;
+    font-size: 16px;
 }
 
-thead th {
-    position: sticky;
-    top: 0;
-    background-color: #f8f9fa;
-    z-index: 2;
-}
-
-tbody tr:nth-child(even) {
-    background-color: #f2f2f2;
+th {
+    background-color: #f8f8f8;
+    font-weight: bold;
 }
 
 /*Here we are styling the list of steps*/
