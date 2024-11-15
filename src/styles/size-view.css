@@ -1,0 +1,35 @@
+/* Explanation caption for the shoe size*/
+.container h1{
+    margin-bottom: 25px;
+}
+
+/*Table styling */
+
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+}
+
+table {
+    width: 100%;
+    margin-bottom: 0;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+th, td {
+    white-space: nowrap;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background-color: #f8f9fa;
+    z-index: 2;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

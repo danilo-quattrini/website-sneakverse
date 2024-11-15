@@ -118,6 +118,28 @@
     margin-left: 0;
   }
 }
+
+/*This is the style for the link to direct to the sizes page*/
+.size-caption{
+  display: inline-flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align the SVG and text */
+}
+
+a.link-for-size {
+  gap: 8px; /* Add spacing between the SVG and text */
+  text-decoration: none; /* Remove underline for the link */
+  color: black; /* Define link color */
+  font-size: 16px; /* Text size for the link */
+  margin-left: 100px;
+}
+
+a.link-for-size svg {
+  display: inline-block; /* Ensure proper inline behavior for SVG */
+  vertical-align: middle; /* Align vertically with text */
+  width: 24px; /* Adjust SVG size */
+  height: 24px;
+}
+
 /*This is the style for the botton add to cart*/
 .add-to-cart {
   padding: 15px 20px;

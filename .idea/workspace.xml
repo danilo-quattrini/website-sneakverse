@@ -5,6 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0fe2388e-2ad9-479a-b29a-240bfdad3f3a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse/src/pages/size-guide.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse/src/styles/size-view.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse/.idea/website-sneakverse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse/.idea/website-sneakverse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse/src/pages/prodoucts-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse/src/pages/prodoucts-view.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse/src/styles/product.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse/src/styles/product.css" afterDir="false" />
     </list>
@@ -16,10 +21,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../Università Portogallo/ProgrammingWeb/website-sneakverse" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2orOQzCsQOPgIcKe4OzBye85WEL" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -35,6 +40,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.sourceCode.HTML",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -53,7 +59,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1731624215837</updated>
-      <workItem from="1731624216885" duration="4171000" />
+      <workItem from="1731624216885" duration="4700000" />
+      <workItem from="1731683693450" duration="5262000" />
+      <workItem from="1731691199596" duration="30000" />
+      <workItem from="1731691233792" duration="472000" />
+      <workItem from="1731691711058" duration="2098000" />
     </task>
     <servers />
   </component>
