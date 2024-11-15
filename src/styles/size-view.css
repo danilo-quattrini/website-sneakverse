@@ -4,7 +4,6 @@
 }
 
 /*Table styling */
-
 .table-container {
     max-height: 400px;
     overflow-y: auto;
@@ -32,4 +31,23 @@ thead th {
 
 tbody tr:nth-child(even) {
     background-color: #f2f2f2;
+}
+
+/*Here we are styling the list of steps*/
+.steps {
+    list-style-type: none;
+    padding-left: 0;
+}
+.steps li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.steps li span.step-number {
+    color: #888;
+    text-align: right;
+    margin-right: 15px;
+}
+.steps li p {
+    margin: 0;
 }
