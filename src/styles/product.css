@@ -1,30 +1,37 @@
-.product-container{
+/* Container for the entire product section */
+.product-container {
   display: flex;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
   gap: 20px;
-
   padding: 20px;
   border-radius: 8px;
-  
 }
-/* This one is the style for the shoes grid */
-.image-container{
+
+/* Left image section that stays fixed as you scroll */
+.image-container {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 10px;
-} 
-/* This one is the main image that u are going to see in the first open of the page */
+  position: sticky;
+  top: 20px; /* Fixed at 20px from the top */
+  height: fit-content;
+  margin-right: 20px;
+}
+
+/* Main image styling */
 .main-image {
   width: 100%;
   max-width: 600px;
   border-radius: 8px;
 }
-/* This one is the style about the small images in the left side of the main image */
+
+/* Thumbnail image styling */
 .thumbnail-container {
   display: flex;
   gap: 10px;
+  margin-top: 15px;
 }
 
 .thumbnail {
@@ -39,59 +46,87 @@
 .thumbnail:hover {
   transform: scale(1.05);
 }
+
 /* This one is the style for the part about the description of the product */
 .product-details {
-  flex: 1;
+  flex: 2;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
+
+/*Here u can find the details about the name about the product.*/
 
 .product-name {
   font-size: 24px;
   font-weight: bold;
 }
 
+.product-gender{
+  font-size: 18px;
+  color: gray;
+}
 .product-price {
   font-size: 20px;
 }
 
-.product-color,
-.product-sizes {
+.product-color{
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
 .color-swatch {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
   cursor: pointer;
   border: 1px solid #ccc;
 }
 
+
+/*This one is for the style of the buttons*/
+
+.product-sizes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: left;
+}
 .size-option {
-  padding: 5px 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
   cursor: pointer;
-  background-color: #f0f0f0;
-  transition: background-color 0.3s ease;
+  font-size: 18px;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
 .size-option:hover {
-  background-color: #ddd;
+  border-color: #888;
+  transform: scale(1.05);
 }
 
+.size-option.selected {
+  border-color: black;
+}
+
+@media screen and (min-width: 320px) {
+  .size-option:nth-child(4n+1) {
+    margin-left: 0;
+  }
+}
+/*This is the style for the botton add to cart*/
 .add-to-cart {
-  padding: 10px 20px;
+  padding: 15px 20px;
   font-size: 16px;
   background-color: #ff9900;
   border: none;
   color: white;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 30px;
   transition: background-color 0.3s ease;
 }
 
@@ -99,7 +134,27 @@
   background-color: #e68a00;
 }
 
-.review-section {
+/*This is the style fo the botton add to favorite*/
+.add-to-favorite {
+  padding: 15px 20px;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid darkgray;
+  color: black;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-favorite:hover {
+  border-color: black ;
+}
+
+.add-to-favorite svg {
+  vertical-align: middle;
+}
+.review-section,
+.info-section{
   border-top: 1px solid #ddd;
   padding-top: 10px;
   margin-top: 10px;
@@ -113,3 +168,4 @@
 .review-section p {
   font-size: 14px;
 }
+
