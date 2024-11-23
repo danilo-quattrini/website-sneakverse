@@ -26,21 +26,27 @@
                 <li><a href="#ofertas">Ofertas</a></li>
             </ul>
         </nav>
+        
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="assets/img/profile2.png" alt="Profile Picture" class="profile-image">
+            <span class="profile-name">Rick Sanchez</span>
+        </div>
     </header>
 
-    <!-- Sección de Video de Fondo -->
+    <!-- Background Video Section -->
     <section class="video-section">
         <video autoplay muted loop class="background-video">
             <source src="assets/img/video1.mp4" type="video/mp4">
-            Tu navegador no soporta videos HTML5.
+            Your browser does not support HTML5 videos.
         </video>
         <div class="video-overlay">
-            <h1>Explora las Mejores Zapatillas Streetwear</h1>
-            <button onclick="scrollToProducts()">Ver Productos</button>
+            <h1>Explore the Best Streetwear Sneakers</h1>
+            <button onclick="scrollToProducts()">View Products</button>
         </div>
     </section>
 
-    <!-- Imágenes de Marcas -->
+    <!-- Brand Images -->
     <section class="marcas">
         <div class="marca-img">
             <img src="assets/img/nike.webp" alt="Nike">
@@ -59,28 +65,42 @@
         </div>
     </section>
 
-    <!-- Banners de Más Vendidas, Ofertas, Novedades -->
+    <!-- Banners for Best Sellers, Offers, New Arrivals -->
     <section class="banner">
-        <h2>Más Vendidas</h2>
+        <h2>Best Sellers</h2>
     </section>
     <section id="productos-populares" class="productos">
-        <!-- Productos más vendidos generados dinámicamente con JavaScript -->
+        <!-- Best-selling products generated dynamically with JavaScript -->
     </section>
 
     <section class="banner">
-        <h2>Ofertas</h2>
+        <h2>Offers</h2>
     </section>
     <section id="productos-ofertas" class="productos">
-        <!-- Productos en oferta generados dinámicamente con JavaScript -->
+        <!-- Products on offer generated dynamically with JavaScript -->
     </section>
 
     <section class="banner">
-        <h2>Novedades</h2>
+        <h2>New Arrivals</h2>
     </section>
     <section id="productos-novedades" class="productos">
-        <!-- Productos nuevos generados dinámicamente con JavaScript -->
+        <!-- New products generated dynamically with JavaScript -->
     </section>
 
     <script src="../src/js/scripts.js"></script>
+
+    <!-- Modal -->
+<!-- Modal -->
+<div id="shoeModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img src="assets/img/logo1.png" alt="Logo" class="modal-logo">
+        <video controls class="modal-video">
+            <source src="assets/img/shoevideo1.mp4" type="video/mp4">
+            Your browser does not support HTML5 videos.
+        </video>
+        <button class="modal-button" onclick="goToProduct()">GO CHECK THEM!</button>
+    </div>
+</div>
 </body>
 </html>
