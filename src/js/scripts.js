@@ -5,7 +5,7 @@ const productos = [
     { nombre: "Adidas Samba OG", precio: "90€", imagen: "shoe4.webp", categoria: "populares" },
     { nombre: "Nike Dunk Low", precio: "95€", imagen: "shoe5.webp", categoria: "novedades" },
     { nombre: "Nike Dunk Low", precio: "120€", imagen: "shoe6.webp", categoria: "ofertas" },
-    { nombre: "Nike Air Force 1 Low", precio: "95€", imagen: "shoe5.webp", categoria: "ofertas" },
+    { nombre: "Nike Air Force 1 Low", precio: "95€", imagen: "shoe9.webp", categoria: "ofertas" },
     { nombre: "Nike Air Max Tuned 1", precio: "179,99€", imagen: "shoe7.webp", categoria: "populares" },
     { nombre: "New Balance 530", precio: "119,99€", imagen: "shoe8.webp", categoria: "novedades" },
     { nombre: "Nike Air Max Tuned 1 Utility", precio: "199,99€", imagen: "shoe10.webp", categoria: "populares" },
@@ -19,7 +19,7 @@ function mostrarProductos() {
     productos.forEach(producto => {
         const card = `
             <div class="producto-card">
-                <img src="recursos/${producto.imagen}" alt="${producto.nombre}" class="producto-imagen">
+                <img src="assets/img//${producto.imagen}" alt="${producto.nombre}" class="producto-imagen">
                 <h3>${producto.nombre}</h3>
                 <p>${producto.precio}</p>
             </div>
