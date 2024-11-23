@@ -9,24 +9,41 @@
 </head>
 <body>
     <div class="container mt-5">
+        <h1>Now let's make you a Sneakersverse Member.</h1>
         <form id="myForm">
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
-                <label for="firstName">First Name</label>
+            <div class="row mb-4">
+                <div class="col-md-6 form-floating mb-3 mb-md-0">
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
+                    <label for="firstName">First Name</label>
+                </div>
+                <div class="col-md-6 form-floating">
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
+                    <label for="lastName">Last Name</label>
+                </div>
             </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
-                <label for="lastName">Last Name</label>
-            </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-4">
                 <input type="email" class="form-control" id="email" placeholder="name@example.com" required>
                 <label for="email">Email address</label>
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-4">
                 <input type="password" class="form-control" id="password" placeholder="Password" required>
                 <label for="password">Password</label>
             </div>
-            <div class="form-floating mb-3">
+            <div class="password-info mb-4">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" fill="currentColor" class="bi bi-x" viewBox="0 0 11 12">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 1 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                    Minimum of 8 characters
+                </div>
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" fill="currentColor" class="bi bi-x" viewBox="0 0 11 12">
+                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 1 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                    Uppercase, lowercase letters, and one number
+                </div>
+            </div>
+            <div class="form-floating mb-4">
                 <select class="form-control" id="shoppingPreference" required>
                     <option value="" disabled selected>Choose...</option>
                     <option value="Men">Men's</option>
@@ -34,11 +51,24 @@
                 </select>
                 <label for="shoppingPreference">Shopping Preference</label>
             </div>
-            <div class="form-floating mb-3">
+            <div class="form-floating mb-4">
                 <input type="date" class="form-control" id="dob" placeholder="Date of Birth" min="1900-01-01" required>
                 <label for="dob">Date of Birth</label>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="emailUpdates" required>
+                <label class="form-check-label" for="emailUpdates">
+                    Sign up for emails to get updates from Sneakerverse on products, offers and your Member benefits.
+                </label>
+            </div>
+            <div class="form-check mb-4">
+                <input class="form-check-input" type="checkbox" id="privacyPolicy" required>
+                <label class="form-check-label" for="privacyPolicy">
+                    I agree to Sneakersverse's Privacy Policy and Terms of Use.
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary submit-btn" formaction="../../public/index.html"><strong>Create Account</strong></button>
+
         </form>
     </div>
 

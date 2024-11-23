@@ -17,3 +17,20 @@ document.getElementById("myForm").addEventListener("submit", function(event) {
         alert("Formulário submetido com sucesso!");
     }
 });
+
+// Adiciona evento de escuta aos campos de input
+document.querySelectorAll('.form-control').forEach(input => {
+    input.addEventListener('blur', function() {
+        if (!this.value) {
+            this.classList.add('is-invalid');
+        } else {
+            this.classList.remove('is-invalid');
+        }
+    });
+});
+
+document.getElementById('myForm').addEventListener('submit', function(event) { 
+    event.preventDefault(); 
+    const formValid = this.checkValidity(); 
+    if (formValid) { window.location.href = '../../public/index.html'; } 
+    else { alert('Por favor, preencha todos os campos corretamente.'); } });
