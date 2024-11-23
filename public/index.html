@@ -1,41 +1,86 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tienda de Zapatillas Streetwear</title>
-        <link rel="stylesheet" href="../src/styles/styles.css">
-        <!--TODO: We can put this link of the google font inside the specifi css file -->
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <header>
-            <img src="../public/assets/img/logo.png" alt="Logo de la Tienda" class="logo">
-            <nav>
-                <ul>
-                    <li><a href="#novedades">Novedades</a></li>
-                    <li><a href="#popular">Más Populares</a></li>
-                    <li><a href="#ofertas">Ofertas</a></li>
-                </ul>
-            </nav>
-        </header>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Zapatillas Streetwear</title>
+    <link rel="stylesheet" href="../src/styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo1.png" alt="Logo de la Tienda" class="logo">
+        <nav>
+            <ul>
+                <li><a href="#novedades">Novedades</a></li>
+                <li>
+                    <a href="#popular">Más Populares</a>
+                    <ul class="submenu">
+                        <li><a href="#nike">Nike</a></li>
+                        <li><a href="#adidas">Adidas</a></li>
+                        <li><a href="#newbalance">New Balance</a></li>
+                        <li><a href="#puma">Puma</a></li>
+                        <li><a href="#converse">Converse</a></li>
+                    </ul>
+                </li>
+                <li><a href="#ofertas">Ofertas</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- Sección de Video de Fondo -->
-        <section class="video-section">
-            <video autoplay muted loop class="background-video">
-                <source src="video.mp4" type="video/mp4">
-                Tu navegador no soporta videos HTML5.
-            </video>
-            <div class="video-overlay">
-                <h1>Explora las Mejores Zapatillas Streetwear</h1>
-                <button onclick="scrollToProducts()">Ver Productos</button>
-            </div>
-        </section>
+    <!-- Sección de Video de Fondo -->
+    <section class="video-section">
+        <video autoplay muted loop class="background-video">
+            <source src="assets/img/video1.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+        <div class="video-overlay">
+            <h1>Explora las Mejores Zapatillas Streetwear</h1>
+            <button onclick="scrollToProducts()">Ver Productos</button>
+        </div>
+    </section>
 
-        <section id="productos" class="productos">
-            <!-- Productos generados dinámicamente con JavaScript -->
-        </section>
+    <!-- Imágenes de Marcas -->
+    <section class="marcas">
+        <div class="marca-img">
+            <img src="assets/img/nike.webp" alt="Nike">
+        </div>
+        <div class="marca-img">
+            <img src="assets/img/adidas.webp" alt="Adidas">
+        </div>
+        <div class="marca-img">
+            <img src="assets/img/newbalance.webp" alt="New Balance">
+        </div>
+        <div class="marca-img">
+            <img src="assets/img/puma.webp" alt="Puma">
+        </div>
+        <div class="marca-img">
+            <img src="assets/img/converse.webp" alt="Converse">
+        </div>
+    </section>
 
-        <script src="scripts.js"></script>
-    </body>
+    <!-- Banners de Más Vendidas, Ofertas, Novedades -->
+    <section class="banner">
+        <h2>Más Vendidas</h2>
+    </section>
+    <section id="productos-populares" class="productos">
+        <!-- Productos más vendidos generados dinámicamente con JavaScript -->
+    </section>
+
+    <section class="banner">
+        <h2>Ofertas</h2>
+    </section>
+    <section id="productos-ofertas" class="productos">
+        <!-- Productos en oferta generados dinámicamente con JavaScript -->
+    </section>
+
+    <section class="banner">
+        <h2>Novedades</h2>
+    </section>
+    <section id="productos-novedades" class="productos">
+        <!-- Productos nuevos generados dinámicamente con JavaScript -->
+    </section>
+
+    <script src="../src/js/scripts.js"></script>
+</body>
 </html>
