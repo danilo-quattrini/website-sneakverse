@@ -1,0 +1,193 @@
+/* Container for the entire product section */
+.product-container {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Left image section that stays fixed as you scroll */
+.image-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: sticky;
+  top: 20px; /* Fixed at 20px from the top */
+  height: fit-content;
+  margin-right: 20px;
+}
+
+/* Main image styling */
+.main-image {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+/* Thumbnail image styling */
+.thumbnail-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.thumbnail {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: transform 0.3s ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+/* This one is the style for the part about the description of the product */
+.product-details {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/*Here u can find the details about the name about the product.*/
+
+.product-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.product-gender{
+  font-size: 18px;
+  color: gray;
+}
+.product-price {
+  font-size: 20px;
+}
+
+.product-color{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+
+/*This one is for the style of the buttons*/
+
+.product-sizes{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  justify-content: left;
+}
+.size-option {
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.size-option:hover {
+  border-color: #888;
+  transform: scale(1.05);
+}
+
+.size-option.selected {
+  border-color: black;
+}
+
+@media screen and (min-width: 320px) {
+  .size-option:nth-child(4n+1) {
+    margin-left: 0;
+  }
+}
+
+/*This is the style for the link to direct to the sizes page*/
+.size-caption{
+  display: inline-flex; /* Use flexbox for alignment */
+  align-items: center; /* Vertically align the SVG and text */
+}
+
+a.link-for-size {
+  gap: 8px; /* Add spacing between the SVG and text */
+  text-decoration: none; /* Remove underline for the link */
+  color: black; /* Define link color */
+  font-size: 16px; /* Text size for the link */
+  margin-left: 100px;
+}
+
+a.link-for-size svg {
+  display: inline-block; /* Ensure proper inline behavior for SVG */
+  vertical-align: middle; /* Align vertically with text */
+  width: 24px; /* Adjust SVG size */
+  height: 24px;
+}
+
+/*This is the style for the botton add to cart*/
+.add-to-cart {
+  padding: 15px 20px;
+  font-size: 16px;
+  background-color: #ff9900;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+  background-color: #e68a00;
+}
+
+/*This is the style fo the botton add to favorite*/
+.add-to-favorite {
+  padding: 15px 20px;
+  font-size: 16px;
+  background-color: white;
+  border: 1px solid darkgray;
+  color: black;
+  cursor: pointer;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.add-to-favorite:hover {
+  border-color: black ;
+}
+
+.add-to-favorite svg {
+  vertical-align: middle;
+}
+.review-section,
+.info-section{
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  margin-top: 10px;
+}
+
+.review-section h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.review-section p {
+  font-size: 14px;
+}
+
