@@ -1,38 +1,45 @@
-const productos = [
-    { nombre: "Nike Air Max Tuned 1", precio: "199,99€", imagen: "shoe1.webp", categoria: "populares" },
-    { nombre: "Adidas Campus 00s", precio: "120€", imagen: "shoe2.webp", categoria: "ofertas" },
-    { nombre: "Nike Air Force 1 Low", precio: "99,99€", imagen: "shoe3.webp", categoria: "novedades" },
-    { nombre: "Adidas Samba OG", precio: "90€", imagen: "shoe4.webp", categoria: "populares" },
-    { nombre: "Nike Dunk Low", precio: "95€", imagen: "shoe5.webp", categoria: "novedades" },
-    { nombre: "Nike Dunk Low", precio: "120€", imagen: "shoe6.webp", categoria: "ofertas" },
-    { nombre: "Nike Air Force 1 Low", precio: "95€", imagen: "shoe9.webp", categoria: "ofertas" },
-    { nombre: "Nike Air Max Tuned 1", precio: "179,99€", imagen: "shoe7.webp", categoria: "populares" },
-    { nombre: "New Balance 530", precio: "119,99€", imagen: "shoe8.webp", categoria: "novedades" },
-    { nombre: "Nike Air Max Tuned 1 Utility", precio: "199,99€", imagen: "shoe10.webp", categoria: "populares" },
+// Array of product objects with details like name, price, image, and category
+const products = [
+    { name: "Nike Air Max Tuned 1", price: "199,99€", images: "shoe1.webp", catogories: "populars" },
+    { name: "Adidas Campus 00s", price: "120€", images: "shoe2.webp", catogories: "offerts" },
+    { name: "Nike Air Force 1 Low", price: "99,99€", images: "ariForce1.webp", catogories: "news" },
+    { name: "Adidas Samba OG", price: "90€", images: "adidasSamba.webp", catogories: "populars" },
+    { name: "Nike Dunk Low", price: "95€", images: "shoe5.webp", catogories: "news" },
+    { name: "Nike Dunk Low", price: "120€", images: "shoe6.webp", catogories: "offerts" },
+    { name: "Nike Air Force 1 Low", price: "95€", images: "shoe9.webp", catogories: "offerts" },
+    { name: "Nike Air Max Tuned 1", price: "179,99€", images: "shoe7.webp", catogories: "populars" },
+    { name: "New Balance 530", price: "119,99€", images: "shoe8.webp", catogories: "news" },
+    { name: "Nike Air Max Tuned 1 Utility", price: "199,99€", images: "shoe10.webp", catogories: "populars" },
 ];
 
-function mostrarProductos() {
-    const contenedorPopulares = document.getElementById('productos-populares');
-    const contenedorOfertas = document.getElementById('productos-ofertas');
-    const contenedorNovedades = document.getElementById('productos-novedades');
+// Function to display products on the index page
+function showProducts() {
+    // Get the containers for different product categories
+    const PopularContent = document.getElementById('popular-products');
+    const OffertContent = document.getElementById('sale-products');
+    const NewsContent = document.getElementById('new-products');
 
-    productos.forEach(producto => {
+    // Loop through each product and create a card for it
+    products.forEach(products => {
+        // HTML structure for a product card
         const card = `
-            <div class="producto-card">
-                <img src="assets/img//${producto.imagen}" alt="${producto.nombre}" class="producto-imagen">
-                <h3>${producto.nombre}</h3>
-                <p>${producto.precio}</p>
+            <div class="products-card">
+                  <img src="assets/img/${products.images}" alt="${products.name}" class="products-images">
+                  <h3>${products.name}</h3>
+                  <p>${products.price}</p>
             </div>
         `;
 
-        if (producto.categoria === "populares") {
-            contenedorPopulares.innerHTML += card;
-        } else if (producto.categoria === "ofertas") {
-            contenedorOfertas.innerHTML += card;
-        } else if (producto.categoria === "novedades") {
-            contenedorNovedades.innerHTML += card;
+        // Append the card to the appropriate container based on the product category
+        if (products.catogories === "populars") {
+            PopularContent.innerHTML += card;
+        } else if (products.catogories === "offerts") {
+            OffertContent.innerHTML += card;
+        } else if (products.catogories === "news") {
+            NewsContent.innerHTML += card;
         }
     });
 }
 
-mostrarProductos();
+// Call the function to display products when the page loads
+showProducts();

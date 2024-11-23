@@ -12,13 +12,22 @@
   <body>
     <!-- Navbar of the webpage where we saw our logo and all the menus -->
     <header>
-      <img src="../public/assets/img/logo.png" alt="Logo de la Tienda" class="logo">
+      <img src="../../public/assets/img/logo1.png" alt="Logo de la Tienda" class="logo">
       <nav>
-          <ul>
-              <li><a>Novità</a></li>
-              <li><a>Populars</a></li>
-              <li><a>Sales</a></li>
-          </ul>
+        <ul>
+          <li><a href="#novedades">Novedades</a></li>
+          <li>
+            <a href="#popular">Más Populares</a>
+            <ul class="submenu">
+              <li><a href="#nike">Nike</a></li>
+              <li><a href="#adidas">Adidas</a></li>
+              <li><a href="#newbalance">New Balance</a></li>
+              <li><a href="#puma">Puma</a></li>
+              <li><a href="#converse">Converse</a></li>
+            </ul>
+          </li>
+          <li><a href="#ofertas">Ofertas</a></li>
+        </ul>
       </nav>
     </header>
 
@@ -27,21 +36,21 @@
 
       <!-- Section where you are going to see all the images on the left side of the webpage-->
       <div class="image-container">
-        <img src="../../public/assets/img/airJordan1-1" alt="Main shoe" class="main-image" id="mainImage">
+        <img src="../../public/assets/img/Nike/airJordan1-1" alt="Main shoe" class="main-image" id="mainImage">
 
         <!-- Here is where there are all the thumbnails -->
         <div class="thumbnail-container">
-          <img src="../../public/assets/img/airJordan1-1" alt="Shoe Image 1" class="thumbnail"
-          onclick="changeImage('../../public/assets/img/airJordan1-1')">
-          <img src="../../public/assets/img/airJordan1-2.webp" alt="Shoe Image 2" class="thumbnail" onclick="changeImage('../../public/assets/img/airJordan1-2.webp')">
-          <img src="../../public/assets/img/airJordan1-6.webp" alt="Shoe Image 6" class="thumbnail"
-          onclick="changeImage('../../public/assets/img/airJordan1-6.webp')">
-          <img src="../../public/assets/img/airJordan1-4.webp" alt="Shoe Image 4" class="thumbnail"
-          onclick="changeImage('../../public/assets/img/airJordan1-4.webp')">
-          <img src="../../public/assets/img/airJordan1-3.webp" alt="Shoe Image 3" class="thumbnail"
-          onclick="changeImage('../../public/assets/img/airJordan1-3.webp')">
-          <img src="../../public/assets/img/airJordan1-5.webp" alt="Shoe Image 5" class="thumbnail"
-          onclick="changeImage('../../public/assets/img/airJordan1-5.webp')">
+          <img src="../../public/assets/img/Nike/airJordan1-1" alt="Shoe Image 1" class="thumbnail"
+               onclick="changeImage('../../public/assets/img/airJordan1-1')">
+          <img src="../../public/assets/img/Nike/airJordan1-2.webp" alt="Shoe Image 2" class="thumbnail" onclick="changeImage('../../public/assets/img/airJordan1-2.webp')">
+          <img src="../../public/assets/img/Nike/airJordan1-6.webp" alt="Shoe Image 6" class="thumbnail"
+               onclick="changeImage('../../public/assets/img/airJordan1-6.webp')">
+          <img src="../../public/assets/img/Nike/airJordan1-4.webp" alt="Shoe Image 4" class="thumbnail"
+               onclick="changeImage('../../public/assets/img/airJordan1-4.webp')">
+          <img src="../../public/assets/img/Nike/airJordan1-3.webp" alt="Shoe Image 3" class="thumbnail"
+               onclick="changeImage('../../public/assets/img/airJordan1-3.webp')">
+          <img src="../../public/assets/img/Nike/airJordan1-5.webp" alt="Shoe Image 5" class="thumbnail"
+               onclick="changeImage('../../public/assets/img/airJordan1-5.webp')">
         </div>
       </div>
 
@@ -54,20 +63,27 @@
         <!-- Color Options -->
         <strong>Color:</strong>
         <div class="product-color">
-          <div class="color-swatch" style="background-color: #333;"></div>
-          <div class="color-swatch" style="background-color: #8B4513;"></div>
-          <div class="color-swatch" style="background-color: #FFA07A;"></div>
+          <div class="color-swatch" style="background-color: #333;"></div> <!-- Black -->
+          <div class="color-swatch" style="background-color: #FF0000;"></div> <!-- Varsity Red -->
+          <div class="color-swatch" style="background-color: #FFFFFF; border: 1px solid #ddd;"></div> <!-- White -->
+          <div class="color-swatch" style="background-color: #4169E1;"></div> <!-- Royal Blue -->
+          <div class="color-swatch" style="background-color: #708090;"></div> <!-- Slate Grey -->
+          <div class="color-swatch" style="background-color: #800080;"></div> <!-- Purple -->
+          <div class="color-swatch" style="background-color: #228B22;"></div> <!-- Forest Green -->
         </div>
 
         <!-- Size Options -->
         <div class="size-caption">
           <strong>Select size</strong>
-          <a href="size-guide.html" target="_blank" class="link-for-size" >
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
-              <path stroke="currentColor" stroke-width="1.5" d="M21.75 10.5v6.75a1.5 1.5 0 01-1.5 1.5H3.75a1.5 1.5 0 01-1.5-1.5V10.5m3.308-2.25h12.885"></path>
-              <path stroke="currentColor" stroke-width="1.5" d="M15.79 5.599l2.652 2.65-2.652 2.653M8.21 5.599l-2.652 2.65 2.652 2.653M17.25 19v-2.5M12 19v-2.5M6.75 19v-2.5"></path>
+          <a href="size-guide.html" target="_blank" class="link-for-size">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px"
+                 fill="none">
+              <path stroke="currentColor" stroke-width="1.5"
+                    d="M21.75 10.5v6.75a1.5 1.5 0 01-1.5 1.5H3.75a1.5 1.5 0 01-1.5-1.5V10.5m3.308-2.25h12.885"></path>
+              <path stroke="currentColor" stroke-width="1.5"
+                    d="M15.79 5.599l2.652 2.65-2.652 2.653M8.21 5.599l-2.652 2.65 2.652 2.653M17.25 19v-2.5M12 19v-2.5M6.75 19v-2.5"></path>
             </svg>
-            Size Guide
+            <b>Size Guide</b>
           </a>
         </div>
 
@@ -123,23 +139,6 @@
     </div>
 
     <!-- Creating the script fot adding the way to change shoe after select one of them -->
-     <script>
-        function changeImage(imageSrc){
-          document.getElementById("mainImage").src = imageSrc;
-        }
-        // Get all size-option buttons
-        const sizeButtons = document.querySelectorAll('.size-option');
-
-        // Add click event to each button to manage selection
-        sizeButtons.forEach(button => {
-          button.addEventListener('click', () => {
-            // Remove 'selected' class from all buttons
-            sizeButtons.forEach(btn => btn.classList.remove('selected'));
-
-            // Add 'selected' class to clicked button
-            button.classList.add('selected');
-          });
-        });
-     </script>
+     <script src="../../src/js/product-animation.js"></script>
   </body>
 </html>
