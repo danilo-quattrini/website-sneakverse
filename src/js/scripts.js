@@ -39,6 +39,25 @@ function showProducts() {
             NewsContent.innerHTML += card;
         }
     });
+
+    function openModal() {
+        document.getElementById("shoeModal").style.display = "block";
+    }
+    
+    function closeModal() {
+        document.getElementById("shoeModal").style.display = "none";
+    }
+    
+    function goToProduct() {
+        // Aquí puedes redirigir a la página de la zapatilla
+        alert("Redirecting to product page...");
+    }
+    
+    // Agregar evento de clic a las zapatillas
+    document.querySelectorAll('.producto-card').forEach(card => {
+        card.addEventListener('click', openModal);
+    });
+    
 }
 
 // Call the function to display products when the page loads
