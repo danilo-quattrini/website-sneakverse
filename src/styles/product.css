@@ -18,13 +18,52 @@
   top: 20px; /* Fixed at 20px from the top */
   height: fit-content;
   margin-right: 20px;
+
 }
 
 /* Main image styling */
-.main-image {
+#mainImage {
   width: 100%;
   max-width: 600px;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
   border-radius: 8px;
+  /*Avoid bug with the image being blurry when scaled down*/
+  will-change: transform, opacity;
+}
+
+/*Creating the animation for slide left and right*/
+.slide-left {
+  animation: slide-left 0.3s ease-in-out;
+}
+
+.slide-right {
+  animation: slide-right 0.3s ease-in-out;
+}
+@keyframes slide-left {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-right {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Thumbnail image styling */
@@ -40,11 +79,12 @@
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid #ccc;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, border-color 0.3s ease;
 }
 
 .thumbnail:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  border-color: #333; /* Highlight effect */
 }
 
 /* This one is the style for the part about the description of the product */
@@ -120,24 +160,19 @@
 }
 
 /*This is the style for the link to direct to the sizes page*/
-.size-caption{
-  display: inline-flex; /* Use flexbox for alignment */
-  align-items: center; /* Vertically align the SVG and text */
-}
-
 a.link-for-size {
   gap: 8px; /* Add spacing between the SVG and text */
   text-decoration: none; /* Remove underline for the link */
   color: black; /* Define link color */
   font-size: 16px; /* Text size for the link */
-  margin-left: 100px;
+  float: right;
 }
 
 a.link-for-size svg {
-  display: inline-block; /* Ensure proper inline behavior for SVG */
-  vertical-align: middle; /* Align vertically with text */
-  width: 24px; /* Adjust SVG size */
-  height: 24px;
+  display: inline; /* Ensure proper inline behavior for SVG */
+  width: 16px; /* Adjust SVG size */
+  height: 16px;
+  vertical-align: center;
 }
 
 /*This is the style for the botton add to cart*/

@@ -1,3 +1,8 @@
+/*Logo for the webpage*/
+.logo {
+    width: 120px;
+}
+
 /* NavBar for the webpage */
 nav li {
     position: relative;

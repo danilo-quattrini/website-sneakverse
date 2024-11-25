@@ -4,20 +4,29 @@
     <title>Name of the shoe</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/styles.css">
+    <!--StyleSheet document for the index page-->
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/components/navbar.css">
     <link rel="stylesheet" href="../styles/product.css">
+    <!--This is the link for the bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <!--This is the icon of the page-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../public/assets/icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../public/assets/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../public/assets/icon/favicon-16x16.png">
+    <link rel="manifest" href="../../public/assets/icon/site.webmanifest">
+    <link rel="shortcut icon" href="../../public/assets/icon/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <!-- Navbar of the webpage where we saw our logo and all the menus -->
     <header>
-      <img src="../../public/assets/img/logo1.png" alt="Logo de la Tienda" class="logo">
+      <img src="../../public/assets/img/logo1.png" alt="Store Logo" class="logo">
       <nav>
         <ul>
-          <li><a href="#novedades">Novedades</a></li>
+          <li><a href="#news">News</a></li>
           <li>
-            <a href="#popular">Más Populares</a>
+            <a href="#popular">More popular</a>
             <ul class="submenu">
               <li><a href="#nike">Nike</a></li>
               <li><a href="#adidas">Adidas</a></li>
@@ -26,7 +35,7 @@
               <li><a href="#converse">Converse</a></li>
             </ul>
           </li>
-          <li><a href="#ofertas">Ofertas</a></li>
+          <li><a href="#sales">Sales</a></li>
         </ul>
       </nav>
     </header>
@@ -36,21 +45,22 @@
 
       <!-- Section where you are going to see all the images on the left side of the webpage-->
       <div class="image-container">
-        <img src="../../public/assets/img/Nike/airJordan1-1" alt="Main shoe" class="main-image" id="mainImage">
+        <img src="../../public/assets/img/Nike/airJordan1-1" alt="Main shoe" id="mainImage">
 
         <!-- Here is where there are all the thumbnails -->
         <div class="thumbnail-container">
           <img src="../../public/assets/img/Nike/airJordan1-1" alt="Shoe Image 1" class="thumbnail"
-               onclick="changeImage('../../public/assets/img/airJordan1-1')">
-          <img src="../../public/assets/img/Nike/airJordan1-2.webp" alt="Shoe Image 2" class="thumbnail" onclick="changeImage('../../public/assets/img/airJordan1-2.webp')">
+               onclick="changeImage('../../public/assets/img/Nike/airJordan1-1', 'left')">
+          <img src="../../public/assets/img/Nike/airJordan1-2.webp" alt="Shoe Image 2" class="thumbnail"
+               onclick="changeImage('../../public/assets/img/Nike/airJordan1-2.webp', 'right')">
           <img src="../../public/assets/img/Nike/airJordan1-6.webp" alt="Shoe Image 6" class="thumbnail"
-               onclick="changeImage('../../public/assets/img/airJordan1-6.webp')">
+               onclick="changeImage('../../public/assets/img/Nike/airJordan1-6.webp', 'left')">
           <img src="../../public/assets/img/Nike/airJordan1-4.webp" alt="Shoe Image 4" class="thumbnail"
-               onclick="changeImage('../../public/assets/img/airJordan1-4.webp')">
+               onclick="changeImage('../../public/assets/img/Nike/airJordan1-4.webp', 'right')">
           <img src="../../public/assets/img/Nike/airJordan1-3.webp" alt="Shoe Image 3" class="thumbnail"
-               onclick="changeImage('../../public/assets/img/airJordan1-3.webp')">
+               onclick="changeImage('../../public/assets/img/Nike/airJordan1-3.webp', 'left')">
           <img src="../../public/assets/img/Nike/airJordan1-5.webp" alt="Shoe Image 5" class="thumbnail"
-               onclick="changeImage('../../public/assets/img/airJordan1-5.webp')">
+               onclick="changeImage('../../public/assets/img/Nike/airJordan1-5.webp', 'right')">
         </div>
       </div>
 
@@ -73,19 +83,15 @@
         </div>
 
         <!-- Size Options -->
-        <div class="size-caption">
+        <p>
           <strong>Select size</strong>
-          <a href="size-guide.html" target="_blank" class="link-for-size">
-            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px"
-                 fill="none">
-              <path stroke="currentColor" stroke-width="1.5"
-                    d="M21.75 10.5v6.75a1.5 1.5 0 01-1.5 1.5H3.75a1.5 1.5 0 01-1.5-1.5V10.5m3.308-2.25h12.885"></path>
-              <path stroke="currentColor" stroke-width="1.5"
-                    d="M15.79 5.599l2.652 2.65-2.652 2.653M8.21 5.599l-2.652 2.65 2.652 2.653M17.25 19v-2.5M12 19v-2.5M6.75 19v-2.5"></path>
+          <a href="../pages/size-guide.html" target="_blank" class="link-for-size">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-rulers" viewBox="0 0 16 16">
+              <path d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h5v-1H2v-1h4v-1H4v-1h2v-1H2v-1h4V9H4V8h2V7H2V6h4V2h1v4h1V4h1v2h1V2h1v4h1V4h1v2h1V2h1v4h1V1a1 1 0 0 0-1-1z"/>
             </svg>
-            <b>Size Guide</b>
+            <strong>Size Guide</strong>
           </a>
-        </div>
+        </p>
 
         <div class="product-sizes">
           <!-- EU Sizes as Buttons -->
@@ -109,9 +115,8 @@
         <!-- Add to favorite button with heart icon -->
         <button class="add-to-favorite" type="button">
           Add to favorite
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-heart" viewBox="0 0 32 32">
-            <path stroke="currentColor" stroke-width="1.5" d="M16.794 3.75c1.324 0 2.568.516 3.504 1.451a4.96 4.96 0 010 7.008L12 20.508l-8.299-8.299a4.96 4.96 0 010-7.007A4.923 4.923 0 017.205 3.75c1.324 0 2.568.516 3.504 1.451l.76.76.531.531.53-.531.76-.76a4.926 4.926 0 013.504-1.451"></path>
-            <title>non-filled</title>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314"/>
           </svg>
         </button>
 
