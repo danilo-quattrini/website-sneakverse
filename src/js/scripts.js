@@ -1,36 +1,36 @@
-const productos = [
-    { nombre: "Nike Air Max Tuned 1", precio: "199,99€", imagen: "shoe1.webp", categoria: "populares" },
-    { nombre: "Adidas Campus 00s", precio: "120€", imagen: "shoe2.webp", categoria: "ofertas" },
-    { nombre: "Nike Air Force 1 Low", precio: "99,99€", imagen: "shoe3.webp", categoria: "novedades" },
-    { nombre: "Adidas Samba OG", precio: "90€", imagen: "shoe4.webp", categoria: "populares" },
-    { nombre: "Nike Dunk Low", precio: "95€", imagen: "shoe5.webp", categoria: "novedades" },
-    { nombre: "Nike Dunk Low", precio: "120€", imagen: "shoe6.webp", categoria: "ofertas" },
-    { nombre: "Nike Air Force 1 Low", precio: "95€", imagen: "shoe9.webp", categoria: "ofertas" },
-    { nombre: "Nike Air Max Tuned 1", precio: "179,99€", imagen: "shoe7.webp", categoria: "populares" },
-    { nombre: "New Balance 530", precio: "119,99€", imagen: "shoe8.webp", categoria: "novedades" },
-    { nombre: "Nike Air Max Tuned 1 Utility", precio: "199,99€", imagen: "shoe10.webp", categoria: "populares" },
+const products = [
+    { name: "Nike Air Max Tuned 1", price: "199,99€", image: "shoe1.webp", catogory: "populars" },
+    { name: "Adidas Campus 00s", price: "120€", image: "shoe2.webp", catogory: "sales" },
+    { name: "Nike Air Force 1 Low", price: "99,99€", image: "shoe3.webp", catogory: "news" },
+    { name: "Adidas Samba OG", price: "90€", image: "shoe4.webp", catogory: "populars" },
+    { name: "Nike Dunk Low", price: "95€", image: "shoe5.webp", catogory: "news" },
+    { name: "Nike Dunk Low", price: "120€", image: "shoe6.webp", catogory: "sales" },
+    { name: "Nike Air Force 1 Low", price: "95€", image: "shoe9.webp", catogory: "sales" },
+    { name: "Nike Air Max Tuned 1", price: "179,99€", image: "shoe7.webp", catogory: "populars" },
+    { name: "New Balance 530", price: "119,99€", image: "shoe8.webp", catogory: "news" },
+    { name: "Nike Air Max Tuned 1 Utility", price: "199,99€", image: "shoe10.webp", catogory: "populars" },
 ];
 
-function mostrarProductos() {
-    const contenedorPopulares = document.getElementById('productos-populares');
-    const contenedorOfertas = document.getElementById('productos-ofertas');
-    const contenedorNovedades = document.getElementById('productos-novedades');
+function showProducts() {
+    const containerPopular = document.getElementById('popular-products');
+    const containerSales = document.getElementById('sale-products');
+    const containserNews = document.getElementById('new-products');
 
-    productos.forEach(producto => {
+    products.forEach(product => {
         const card = `
-            <div class="producto-card">
-                <img src="assets/img//${producto.imagen}" alt="${producto.nombre}" class="producto-imagen">
-                <h3>${producto.nombre}</h3>
-                <p>${producto.precio}</p>
+            <div class="products-card">
+                <img src="assets/img//${product.image}" alt="${product.name}" class="products-images">
+                <h3>${product.name}</h3>
+                <p>${product.price}</p>
             </div>
         `;
 
-        if (producto.categoria === "populares") {
-            contenedorPopulares.innerHTML += card;
-        } else if (producto.categoria === "ofertas") {
-            contenedorOfertas.innerHTML += card;
-        } else if (producto.categoria === "novedades") {
-            contenedorNovedades.innerHTML += card;
+        if (product.catogory === "populars") {
+            containerPopular.innerHTML += card;
+        } else if (product.catogory === "sales") {
+            containerSales.innerHTML += card;
+        } else if (product.catogory === "news") {
+            containserNews.innerHTML += card;
         }
     });
 
@@ -43,15 +43,13 @@ function mostrarProductos() {
     }
     
     function goToProduct() {
-        // Aquí puedes redirigir a la página de la zapatilla
         alert("Redirecting to product page...");
     }
-    
-    // Agregar evento de clic a las zapatillas
-    document.querySelectorAll('.producto-card').forEach(card => {
+
+    document.querySelectorAll('.products-card').forEach(card => {
         card.addEventListener('click', openModal);
     });
     
 }
 
-mostrarProductos();
+showProducts();
