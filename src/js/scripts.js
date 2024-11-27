@@ -1,36 +1,36 @@
 const products = [
-    { name: "Nike Air Max Tuned 1", price: "199,99€", image: "shoe1.webp", catogory: "populars" },
-    { name: "Adidas Campus 00s", price: "120€", image: "shoe2.webp", catogory: "sales" },
-    { name: "Nike Air Force 1 Low", price: "99,99€", image: "shoe3.webp", catogory: "news" },
-    { name: "Adidas Samba OG", price: "90€", image: "shoe4.webp", catogory: "populars" },
-    { name: "Nike Dunk Low", price: "95€", image: "shoe5.webp", catogory: "news" },
-    { name: "Nike Dunk Low", price: "120€", image: "shoe6.webp", catogory: "sales" },
-    { name: "Nike Air Force 1 Low", price: "95€", image: "shoe9.webp", catogory: "sales" },
-    { name: "Nike Air Max Tuned 1", price: "179,99€", image: "shoe7.webp", catogory: "populars" },
-    { name: "New Balance 530", price: "119,99€", image: "shoe8.webp", catogory: "news" },
-    { name: "Nike Air Max Tuned 1 Utility", price: "199,99€", image: "shoe10.webp", catogory: "populars" },
+    { name: "Nike Air Max Tuned 1", price: "199,99€", image: "shoe1.webp", category: "populars" },
+    { name: "Adidas Campus 00s", price: "120€", image: "shoe2.webp", category: "sales" },
+    { name: "Nike Air Force 1 Low", price: "99,99€", image: "shoe3.webp", category: "news" },
+    { name: "Adidas Samba OG", price: "90€", image: "shoe4.webp", category: "populars" },
+    { name: "Nike Dunk Low", price: "95€", image: "shoe5.webp", category: "news" },
+    { name: "Nike Dunk Low", price: "120€", image: "shoe6.webp", category: "sales" },
+    { name: "Nike Air Force 1 Low", price: "95€", image: "shoe9.webp", category: "sales" },
+    { name: "Nike Air Max Tuned 1", price: "179,99€", image: "shoe7.webp", category: "populars" },
+    { name: "New Balance 530", price: "119,99€", image: "shoe8.webp", category: "news" },
+    { name: "Nike Air Max Tuned 1 Utility", price: "199,99€", image: "shoe10.webp", category: "populars" },
 ];
 
 function showProducts() {
     const containerPopular = document.getElementById('popular-products');
     const containerSales = document.getElementById('sale-products');
-    const containserNews = document.getElementById('new-products');
+    const containerNews = document.getElementById('new-products');
 
     products.forEach(product => {
         const card = `
             <div class="products-card">
-                <img src="assets/img//${product.image}" alt="${product.name}" class="products-images">
+                <img src="assets/img/${product.image}" alt="${product.name}" class="products-images">
                 <h3>${product.name}</h3>
                 <p>${product.price}</p>
             </div>
         `;
 
-        if (product.catogory === "populars") {
+        if (product.category === "populars") {
             containerPopular.innerHTML += card;
-        } else if (product.catogory === "sales") {
+        } else if (product.category === "sales") {
             containerSales.innerHTML += card;
-        } else if (product.catogory === "news") {
-            containserNews.innerHTML += card;
+        } else if (product.category === "news") {
+            containerNews.innerHTML += card;
         }
     });
 
