@@ -1,10 +1,7 @@
-<<<<<<< .merge_file_hMwKd1
-.idea/workspace.xml
-=======
+
 # Ignore all files in the .idea directory
 .idea/
 # Ignore all files in the .vscode directory
 .vscode/
 # Ignore all the files
 .DS_Store
->>>>>>> .merge_file_78wBaL
