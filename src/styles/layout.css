@@ -6,10 +6,15 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;  /* Asegura que toda la página tenga altura completa */
+}
+
 body {
     font-family: 'Montserrat', sans-serif;
     background-color: #f5f5f5;
     color: #333;
+    overflow-y: auto; /* Permite el desplazamiento vertical en toda la página */
 }
 
 header {

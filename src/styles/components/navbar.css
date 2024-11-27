@@ -1,9 +1,26 @@
-/*Logo for the webpage*/
+/*Logo of the website*/
 .logo {
     width: 120px;
 }
 
-/* NavBar for the webpage */
+/*navbar of the webpage*/
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+/* Menú desplegable */
 nav li {
     position: relative;
 }
@@ -34,21 +51,5 @@ nav .submenu a {
 }
 
 nav .submenu a:hover {
-    color: #555;
-}
-
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    transition: color 0.3s;
-}
-
-nav a:hover {
     color: #555;
 }

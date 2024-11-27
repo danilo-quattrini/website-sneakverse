@@ -1,4 +1,5 @@
 
+
 /* Section about the sub-video */
 .video-section {
     position: relative;
@@ -129,6 +130,8 @@
     color: #333; /* Color del texto */
 }
 
+/** MAKE IT IN ENGLISH */
+
 /* Estilos del Modal */
 .modal {
     display: none; /* Ocultar el modal por defecto */
@@ -186,5 +189,31 @@
     font-weight: bold;
     color: #333;
     cursor: pointer;
+
+
+}
+
+/* Estilos para el pie de página */
+footer {
+    margin-top: 2rem;  /* Asegura que el footer se separe un poco del contenido */
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Barra de desplazamiento personalizada */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff6600;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff3300;
 }
 
