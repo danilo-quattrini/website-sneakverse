@@ -1,0 +1,322 @@
+/* Section about the sub-video */
+.video-section {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.video-overlay {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.video-overlay h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.video-overlay button {
+    padding: 0.7rem 1.5rem;
+    background-color: #ff6600;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+}
+
+.video-overlay button:hover {
+    background-color: #ff3300;
+}
+
+/* Brand images */
+.brand {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.brand-img img {
+    width: 100%;
+    max-width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Banners */
+.banner {
+    background-color: #000;
+    color: #fff;
+    padding: 0.5rem 0;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+/* Products */
+.products {
+    display: grid;
+    gap: 1.5rem;
+    padding: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.products-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.products-card:hover {
+    transform: scale(1.05);
+}
+
+.products-images {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 10px;
+}
+
+.profile-name {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(34, 33, 33, 0.8);
+}
+
+.modal-content {
+    position: relative;
+    margin: 15% auto;
+    padding: 20px;
+    width: 60%;
+    background-color: #fff;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.modal-logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+.modal-video {
+    width: 100%;
+    height: fit-content;
+}
+
+.modal-button {
+    padding: 0.7rem 1.5rem;
+    background-color: #383533;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.modal-button:hover {
+    background-color: #ff3300;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    margin-top: 2rem;
+    background-color: #1a1a1a;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff6600;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ff3300;
+}
+
+/* Black Friday Button */
+.black-friday {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6600;
+    text-shadow: 
+        0 0 2px #ff6600,
+        0 0 4px #ff6600,
+        0 0 8px #ff3300,
+        0 0 12px #ff3300;
+    background: transparent;
+    border: 2px solid #ff3300;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 10px;
+    animation: subtle-flicker 2.5s infinite;
+}
+
+@keyframes subtle-flicker {
+    0%, 95%, 100% {
+        text-shadow: 
+            0 0 2px #ff6600,
+            0 0 4px #ff6600,
+            0 0 8px #ff3300,
+            0 0 12px #ff3300;
+    }
+    50% {
+        text-shadow: 
+            0 0 1px #ff6600,
+            0 0 3px #ff6600,
+            0 0 6px #ff3300;
+    }
+    80% {
+        text-shadow: 
+            0 0 1px #ff3300,
+            0 0 2px #ff3300;
+    }
+}
+
+.products {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 2rem;
+}
+
+.product-card {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #999;
+    margin-right: 0.5rem;
+}
+
+.new-price {
+    color: #ff6600;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.discount {
+    font-size: 1rem;
+    color: #ff3300;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex; /* Usamos flexbox para alinear los enlaces */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 2rem; /* Añade espacio entre los elementos */
+    margin-top: 2rem; /* Espacio arriba del contenedor */
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+.return-link {
+    font-size: 0.8rem; /* Tamaño de la fuente más pequeño */
+    color: #333; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    padding: 0.5rem; /* Espaciado dentro del enlace */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s; /* Transición suave para el color */
+}
+
+.return-link:hover {
+    background-color: #ff6600; /* Fondo naranja al pasar el ratón */
+    color: #fff; /* Color blanco para el texto cuando se pasa el ratón */
+}
+
+/* Espacio adicional entre los enlaces "Black Friday" y "Return to the main page" */
+.nav-links li:first-child {
+    margin-right: 2rem; /* Espacio extra entre el primer y segundo enlace */
+}

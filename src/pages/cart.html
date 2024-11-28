@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../styles/cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Shopping Cart</h1>
+    </header>
+    <main>
+        <div class="cart-container">
+            <!-- List of products -->
+            <div class="cart-items">
+                <!-- Example product item -->
+                <div class="cart-item">
+                    <img src="shoe-example.jpg" alt="Product Image" class="product-image">
+                    <div class="item-details">
+                        <h3>Streetwear Shoes</h3>
+                        <p>Price: $120</p>
+                        <div class="quantity-control">
+                            <button class="quantity-btn">-</button>
+                            <span class="quantity">1</span>
+                            <button class="quantity-btn">+</button>
+                        </div>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
+                <!-- Additional products can be dynamically added here -->
+            </div>
+            <!-- Summary section -->
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <p>Total Items: <span id="total-items">1</span></p>
+                <p>Total Price: $<span id="total-price">120</span></p>
+                <button class="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
