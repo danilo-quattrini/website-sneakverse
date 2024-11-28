@@ -217,3 +217,42 @@ footer {
     background-color: #ff3300;
 }
 
+
+.black-friday {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ff6600;
+    text-shadow: 
+        0 0 2px #ff6600,
+        0 0 4px #ff6600,
+        0 0 8px #ff3300,
+        0 0 12px #ff3300;
+    background: transparent;
+    border: 2px solid #ff3300;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    border-radius: 10px;
+    animation: subtle-flicker 2.5s infinite;
+}
+
+/* Efecto de parpadeo reducido */
+@keyframes subtle-flicker {
+    0%, 95%, 100% {
+        text-shadow: 
+            0 0 2px #ff6600,
+            0 0 4px #ff6600,
+            0 0 8px #ff3300,
+            0 0 12px #ff3300;
+    }
+    50% {
+        text-shadow: 
+            0 0 1px #ff6600,
+            0 0 3px #ff6600,
+            0 0 6px #ff3300;
+    }
+    80% {
+        text-shadow: 
+            0 0 1px #ff3300,
+            0 0 2px #ff3300;
+    }
+}
