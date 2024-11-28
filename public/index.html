@@ -5,15 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Streetwear Sneaker Store</title>
   <!--StyleSheet document for the index page-->
-  <link rel="stylesheet" href="../src/styles/styles.css">
+  <link rel="stylesheet" href="/src/styles/styles.css">
   <!--This one is the layout for all the pages inside the project-->
-  <link rel="stylesheet" href="../src/styles/layout.css">
+  <link rel="stylesheet" href="/src/styles/layout.css">
   <!--StyleSheet document for the navbar component-->
-  <link rel="stylesheet" href="../src/styles/components/navbar.css">
+  <link rel="stylesheet" href="/src/styles/components/navbar.css">
 </head>
 <body>
 <header>
-  <img src="assets/img/logo1.png" alt="Logo of the website" class="logo">
+  <img src="/assets/img/logo1.png" alt="Logo of the website" class="logo">
   <nav>
     <ul>
       <li><a href="#news">News</a></li>
@@ -33,7 +33,7 @@
 
   <!-- Profile Section -->
   <div class="profile">
-    <img src="assets/img/profile2.png" alt="Profile Picture" class="profile-image">
+    <img src="/assets/img/profile2.png" alt="Profile Picture" class="profile-image">
     <span class="profile-name">Rick Sanchez</span>
   </div>
 </header>
@@ -41,7 +41,7 @@
 <!-- Background Video Section -->
 <section class="video-section">
   <video autoplay muted loop class="background-video">
-    <source src="assets/img/video1.mp4" type="video/mp4">
+    <source src="/assets/vid/video1.mp4" type="video/mp4">
     Your browser does not support HTML5 videos.
   </video>
   <div class="video-overlay">
@@ -53,19 +53,19 @@
 <!-- Brand Images -->
 <section class="brand">
   <div class="brand-img">
-    <img src="assets/img/nike.webp" alt="Nike">
+    <img src="/assets/img/logos/nike.webp" alt="Nike">
   </div>
   <div class="brand-img">
-    <img src="assets/img/adidas.webp" alt="Adidas">
+    <img src="/assets/img/logos/adidas.webp" alt="Adidas">
   </div>
   <div class="brand-img">
-    <img src="assets/img/newbalance.webp" alt="New Balance">
+    <img src="/assets/img/logos/newbalance.webp" alt="New Balance">
   </div>
   <div class="brand-img">
-    <img src="assets/img/puma.webp" alt="Puma">
+    <img src="/assets/img/logos/puma.webp" alt="Puma">
   </div>
   <div class="brand-img">
-    <img src="assets/img/converse.webp" alt="Converse">
+    <img src="/assets/img/logos/converse.webp" alt="Converse">
   </div>
 </section>
 
@@ -94,7 +94,7 @@
 </section>
 
 <!--Script for generate products dynamically-->
-<script src="../src/js/scripts.js"></script>
+<script src="/src/js/scripts.js"></script>
 
 <!-- Modal -->
 <div id="shoeModal" class="modal">
@@ -102,7 +102,7 @@
     <span class="close" onclick="closeModal()">&times;</span>
     <img src="assets/img/logo1.png" alt="Logo" class="modal-logo">
     <video controls class="modal-video">
-      <source src="assets/img/shoevideo1.mp4" type="video/mp4">
+      <source src="assets/vid/shoevideo1.mp4" type="video/mp4">
       Your browser does not support HTML5 videos.
     </video>
     <button class="modal-button" onclick="goToProduct()">GO CHECK THEM!</button>
@@ -111,7 +111,7 @@
 
 <!-- Footer Section -->
 <footer>
-  <iframe src="../src/components/footer.html" style="width: 100%; height: auto; border: none;" scrolling="no"></iframe>
+  <iframe src="/src/components/footer.html" style="width: 100%; height: auto; border: none;" scrolling="no"></iframe>
 </footer>
 
 </body>
