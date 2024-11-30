@@ -190,18 +190,15 @@
     color: #333;
     cursor: pointer;
 
-   
+
 }
 
-/* Estilos para el pie de página */
-footer {
-    margin-top: 2rem;  /* Asegura que el footer se separe un poco del contenido */
-    background-color: #1a1a1a;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-    position: relative;
+/*Styles for the link of the shoes*/
+.link-shoes{
+    text-decoration: none;
+    color: #333;
 }
+
 
 /* Barra de desplazamiento personalizada */
 ::-webkit-scrollbar {

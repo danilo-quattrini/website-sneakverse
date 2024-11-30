@@ -1,71 +1,99 @@
 /* Container for the entire product section */
 .product-container {
   display: flex;
-  max-width: 1200px;
-  margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 20px;
   padding: 20px;
-  border-radius: 8px;
 }
+
+/*Style for the main image*/
+#mainImage{
+  width: 518px;
+  height: 518px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  z-index: 1;
+}
+
 
 /* Left image section that stays fixed as you scroll */
 .image-container {
-  flex: 1;
+  width: 518px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  position: sticky;
-  top: 20px; /* Fixed at 20px from the top */
-  height: fit-content;
-  margin-right: 20px;
+  align-items: center;
+
 }
 
-/* Main image styling */
-.main-image {
-  width: 100%;
-  max-width: 600px;
+/* Container for the sliding effect */
+.slider-wrapper {
+  position: relative;
+  width: 518px;
+  height: 518px;
+  overflow: hidden;
+}
+
+/* Two images sliding left and right */
+.slider-wrapper img {
+  width: 518px;
+  height: 518px;
+  object-fit: contain;
+  border: 1px solid #ddd;
   border-radius: 8px;
+  transition: transform 0.5s ease-in-out;
+  background-color: #fff;
 }
 
 /* Thumbnail image styling */
 .thumbnail-container {
   display: flex;
   gap: 10px;
-  margin-top: 15px;
+  overflow-x: auto;
+  margin-top: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  width: 518px;
 }
 
 .thumbnail {
   width: 80px;
-  height: auto;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  transition: transform 0.3s ease;
+  border: 1px solid transparent;
+  transition: border 0.3s ease;
 }
 
 .thumbnail:hover {
   transform: scale(1.05);
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
+/* Selected thumbnail retains the border */
+.thumbnail.selected {
+  border-color: #333; /* Black border for the selected thumbnail */
+  transform: scale(1.1); /* Slightly zoomed in for emphasis */
+}
+
 
 /* This one is the style for the part about the description of the product */
 .product-details {
-  flex: 2;
+  max-width: 600px;
   display: flex;
   flex-direction: column;
   gap: 15px;
 }
 
-/*Here u can find the details about the name about the product.*/
-
-.product-name {
-  font-size: 24px;
+.product-details h1, .product-details h2 {
+  margin: 0 0 10px;
   font-weight: bold;
 }
-
-.product-gender{
-  font-size: 18px;
-  color: gray;
+.product-details h2{
+  color: #ff9900;
 }
+/*Here you can find the details about the name about the product.*/
+
 .product-price {
   font-size: 20px;
 }
@@ -94,6 +122,7 @@
   margin-top: 10px;
   justify-content: left;
 }
+
 .size-option {
   padding: 15px 20px;
   border: 1px solid #ccc;
@@ -120,24 +149,19 @@
 }
 
 /*This is the style for the link to direct to the sizes page*/
-.size-caption{
-  display: inline-flex; /* Use flexbox for alignment */
-  align-items: center; /* Vertically align the SVG and text */
-}
-
 a.link-for-size {
   gap: 8px; /* Add spacing between the SVG and text */
   text-decoration: none; /* Remove underline for the link */
   color: black; /* Define link color */
   font-size: 16px; /* Text size for the link */
-  margin-left: 100px;
+  float: right;
 }
 
 a.link-for-size svg {
-  display: inline-block; /* Ensure proper inline behavior for SVG */
-  vertical-align: middle; /* Align vertically with text */
-  width: 24px; /* Adjust SVG size */
-  height: 24px;
+  display: inline; /* Ensure proper inline behavior for SVG */
+  width: 16px; /* Adjust SVG size */
+  height: 16px;
+  vertical-align: center;
 }
 
 /*This is the style for the botton add to cart*/
