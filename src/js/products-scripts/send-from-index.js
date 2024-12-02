@@ -1,13 +1,4 @@
-function getQueryParams() {
-    const params = new URLSearchParams(window.location.search);
-    return {
-        name: params.get('name'),
-        price: params.get('price'),
-        image: params.get('image'),
-        brand: params.get('brand')
-    };
-}
-
+import { getQueryParams } from '/src/js/components/url-parameters.js';
 function updateProductDetails() {
     const { name, price, image, brand } = getQueryParams();
 
@@ -50,12 +41,46 @@ function updateProductDetails() {
             thumbnailContainer.appendChild(thumbnail);
 
             thumbnail.addEventListener('click', function () {
-                document.getElementById('mainImage').src = thumbnail.dataset.image;
-                document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active-thumbnail'));
-                thumbnail.classList.add('active-thumbnail');
+                changeMainImage(thumbnail.dataset.image, thumbnail);
             });
         });
     }
 }
+function changeMainImage(newImageSrc, thumbnail) {
+    const mainImage = document.getElementById('mainImage');
+    const currentImageSrc = mainImage.src;
 
+    // Determine the direction of the animation based on the image change
+    const direction = newImageSrc > currentImageSrc ? 'left' : 'right';
+
+    // Animate main image sliding out and the new image sliding in
+    animateImageSlide(mainImage, newImageSrc, direction);
+
+    // Update the active thumbnail
+    document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active-thumbnail'));
+    thumbnail.classList.add('active-thumbnail');
+}
+
+function animateImageSlide(mainImage, newImageSrc, direction) {
+    const container = mainImage.parentElement;
+
+    // Set up initial styles for sliding animation
+    container.style.position = 'relative';
+    mainImage.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+    mainImage.style.transform = direction === 'left' ? 'translateX(-100%)' : 'translateX(100%)';
+    mainImage.style.opacity = '0';
+    // Wait for the sliding out animation to finish, then change the image
+    setTimeout(() => {
+        mainImage.src = newImageSrc;
+        mainImage.style.transition = 'none';
+        mainImage.style.transform = direction === 'left' ? 'translateX(100%)' : 'translateX(-100%)';
+
+        // Allow a brief delay to ensure image is updated before sliding in
+        setTimeout(() => {
+            mainImage.style.transition = 'transform 0.5s ease, opacity 0.5s ease';
+            mainImage.style.transform = 'translateX(0)';
+            mainImage.style.opacity = '1';
+        }, 50);
+    }, 500);
+}
 document.addEventListener('DOMContentLoaded', updateProductDetails);
