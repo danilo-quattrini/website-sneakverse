@@ -1,6 +1,17 @@
-import { getQueryParams } from '/src/js/components/url-parameters.js';
+
+function getQueryParams() {
+    const params = new URLSearchParams(window.location.search);
+    return {
+        name: params.get('name'),
+        price: params.get('price'),
+        image: params.get('image'),
+        brand: params.get('brand'),
+        type: params.get('type')
+    };
+}
+
 function updateProductDetails() {
-    const { name, price, image, brand } = getQueryParams();
+    const { name, price, image, brand, type } = getQueryParams();
 
     // If all parameters are provided, update the page content
     if (name && price && image && brand) {
@@ -18,11 +29,11 @@ function updateProductDetails() {
 
         // Array of image filenames
         const imageFiles = [
-            `${brand.toLowerCase()}-0.webp`,
-            `${brand.toLowerCase()}-1.webp`,
-            `${brand.toLowerCase()}-2.webp`,
-            `${brand.toLowerCase()}-3.webp`,
-            `${brand.toLowerCase()}-4.webp`
+            `${brand.toLowerCase()}-${type}-0.webp`,
+            `${brand.toLowerCase()}-${type}-1.webp`,
+            `${brand.toLowerCase()}-${type}-2.webp`,
+            `${brand.toLowerCase()}-${type}-3.webp`,
+            `${brand.toLowerCase()}-${type}-4.webp`
         ];
 
         // Dynamically generate thumbnail images (assuming 5 images per product)
