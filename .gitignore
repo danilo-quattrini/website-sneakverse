@@ -1,9 +1,44 @@
-.idea/workspace.xml
-.idea/*
-# Ignore all files in the .idea directory
-.idea/
-# Ignore all files in the .vscode directory
-.vscode/
-# Ignore all the files
+# Node.js dependencies
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS generated files
 .DS_Store
-*/.DS_Store
+Thumbs.db
+
+# IDE specific files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# Build output
+dist/
+build/
+
+# Temporary files
+tmp/
+temp/
+
+# Coverage directory used by testing tools
+coverage/
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Miscellaneous
+*.swp
+*.bak
+*.tmp
+*.orig
+*.rej

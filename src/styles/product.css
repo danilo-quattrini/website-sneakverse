@@ -21,6 +21,7 @@
 .image-container {
   width: 518px;
   display: flex;
+  margin-right: 10px;
   flex-direction: column;
   align-items: center;
 
@@ -39,7 +40,6 @@
   width: 518px;
   height: 518px;
   object-fit: contain;
-  border: 1px solid #ddd;
   border-radius: 8px;
   transition: transform 0.5s ease-in-out;
   background-color: #fff;
@@ -48,32 +48,32 @@
 /* Thumbnail image styling */
 .thumbnail-container {
   display: flex;
-  gap: 10px;
+  gap: 25px;
   overflow-x: auto;
   margin-top: 10px;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
   width: 518px;
 }
 
 .thumbnail {
   width: 80px;
   height: 80px;
+  overflow: hidden;
   object-fit: cover;
-  border-radius: 8px;
   cursor: pointer;
   border: 1px solid transparent;
   transition: border 0.3s ease;
 }
 
+/* Hover effect for the thumbnail */
 .thumbnail:hover {
+  border: 1px solid #333; /* Black border for the hovered thumbnail */
   transform: scale(1.05);
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 /* Selected thumbnail retains the border */
-.thumbnail.selected {
-  border-color: #333; /* Black border for the selected thumbnail */
-  transform: scale(1.1); /* Slightly zoomed in for emphasis */
+.active-thumbnail {
+  border-bottom: 3px solid #333; /* Black border for the selected thumbnail */
 }
 
 
