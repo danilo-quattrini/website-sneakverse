@@ -130,8 +130,8 @@
     color: #333; /* Color del texto */
 }
 
-/** MAKE IT IN ENGLISH */
 
+/* Estilos del Modal */
 /* Estilos del Modal */
 .modal {
     display: none; /* Ocultar el modal por defecto */
@@ -147,12 +147,20 @@
 
 .modal-content {
     position: relative;
-    margin: 15% auto; /* Margen superior e inferior */
+    margin: 5% auto; /* Margen superior e inferior */
     padding: 20px;
-    width: 60%; /* Ancho del modal */
+    width: 100%; /* Ancho del modal */
+    max-width: 600px; /* Ancho máximo del modal */
     background-color: #fff; /* Fondo blanco */
     border-radius: 10px; /* Bordes redondeados */
     text-align: center;
+    overflow: hidden; /* Ocultar cualquier contenido que se desborde */
+}
+
+.modal-video {
+    width: 100%; /* Ancho completo del video */
+    height: auto; /* Altura automática para mantener la proporción */
+    max-height: 400px; /* Altura máxima del video */
 }
 
 .modal-logo {
@@ -160,10 +168,6 @@
     margin-bottom: 10px;
 }
 
-.modal-video {
-    width: 100%; /* Ancho completo del video */
-    height: fit-content; /* Altura automática */
-}
 
 .modal-button {
     padding: 0.7rem 1.5rem;
@@ -178,6 +182,15 @@
 
 .modal-button:hover {
     background-color: #ff3300;
+}
+
+.return-message {
+    font-size: 1rem;
+    color: #333; /* Dark color for the text */
+    margin: 10px 0; /* Space above and below the message */
+    text-align: center; /* Center the text */
+    font-style: italic; /* Italic style for emphasis */
+    font-weight: bold;
 }
 
 /* Estilo para cerrar el modal */
