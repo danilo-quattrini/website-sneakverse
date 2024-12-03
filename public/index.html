@@ -96,18 +96,22 @@
     <!--Script for generate products dynamically-->
     <script src="../src/js/scripts.js"></script>
 
-    <!-- Modal -->
-    <div id="shoeModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
+<!-- Modal -->
+<div id="shoeModal" class="modal">
+    <div class="modal-content">
+        <a href="index.html" class="modal-logo-link">
             <img src="assets/img/logo1.png" alt="Logo" class="modal-logo">
-            <video controls class="modal-video">
-                <source src="assets/img/shoevideo1.mp4" type="video/mp4">
-                Your browser does not support HTML5 videos.
-            </video>
-            <button class="modal-button" onclick="goToProduct()">GO CHECK THEM!</button>
-        </div>
+        </a>
+        <p class="return-message">Click the logo to return to the homepage</p>
+        <h3></h3> <!-- Para mostrar el nombre del producto -->
+        <p></p> <!-- Para mostrar el precio del producto -->
+        <video controls class="modal-video">
+            <source src="" type="video/mp4"> <!-- La fuente se actualizará dinámicamente -->
+            Your browser does not support HTML5 videos.
+        </video>
+        <button class="modal-button" onclick="goToProduct()">GO CHECK THEM!</button>
     </div>
+</div>
 
     <!-- Footer Section -->
     <footer>
