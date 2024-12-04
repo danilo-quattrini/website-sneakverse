@@ -75,11 +75,21 @@
                 <p>Total Price: €<span id="total-price">99,99</span></p>
             </div>
         </div>
-        
+           <!-- Buy Now Button -->
+           <div class="buy-now-container">
+            <button id="buy-now-button" class="buy-now-button">Buy Now</button>
+        </div>
     </main>
 
     <footer>
         <iframe src="../components/footer.html" style="width: 100%; height: auto; border: none;" scrolling="no"></iframe>
     </footer>
+    <script>
+        document.getElementById('buy-now-button').addEventListener('click', function() {
+            
+            alert('Thank you for your purchase!');
+            
+        });
+    </script>
 </body>
 </html>
