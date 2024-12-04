@@ -59,7 +59,7 @@
                     <img src="../../public/assets/img/ariForce1.webp" alt="Product Image" class="product-image">
                     <div class="item-details">
                         <h3>Streetwear Shoes</h3>
-                        <p>Price: $99,99</p>
+                        <p>Price: €99,99</p>
                         <div class="quantity-control">
                             <span class="quantity">1 unit</span>
                         </div>
@@ -72,14 +72,24 @@
             <div class="cart-summary">
                 <h2>Order Summary</h2>
                 <p>Total Items: <span id="total-items">1</span></p>
-                <p>Total Price: $<span id="total-price">99,99</span></p>
+                <p>Total Price: €<span id="total-price">99,99</span></p>
             </div>
         </div>
-        
+           <!-- Buy Now Button -->
+           <div class="buy-now-container">
+            <button id="buy-now-button" class="buy-now-button">Buy Now</button>
+        </div>
     </main>
 
     <footer>
         <iframe src="../components/footer.html" style="width: 100%; height: auto; border: none;" scrolling="no"></iframe>
     </footer>
+    <script>
+        document.getElementById('buy-now-button').addEventListener('click', function() {
+            
+            alert('Thank you for your purchase!');
+            
+        });
+    </script>
 </body>
 </html>
