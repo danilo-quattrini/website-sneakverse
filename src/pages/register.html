@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário</title>
+    <title>Registration Form</title>
+    <!-- Including Bootstrap stylesheet for responsive design and styling -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="../styles/reg-log-style.css">
+    <link rel="stylesheet" href="../styles/reg-log-style.css"> <!-- Link to a custom stylesheet -->
 </head>
 <body>
     <div class="container mt-5">
-        <h1>Now let's make you a Sneakersverse Member.</h1>
+        <h1>Now let's make you a Sneakersverse Member.</h1> <!-- Page heading -->
         <form id="myForm">
+            <!-- Input fields for user details -->
             <div class="row mb-4">
                 <div class="col-md-6 form-floating mb-3 mb-md-0">
                     <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
-                    <label for="firstName">First Name</label>
+                    <label for="firstName">First Name</label> <!-- Label for accessibility -->
                 </div>
                 <div class="col-md-6 form-floating">
                     <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
@@ -29,6 +31,7 @@
                 <input type="password" class="form-control" id="password" placeholder="Password" required>
                 <label for="password">Password</label>
             </div>
+            <!-- Password requirements display -->
             <div class="password-info mb-4">
                 <div>
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="12" fill="currentColor" class="bi bi-x" viewBox="0 0 11 12">
@@ -43,6 +46,7 @@
                     Uppercase, lowercase letters, and one number
                 </div>
             </div>
+            <!-- Shopping preference dropdown -->
             <div class="form-floating mb-4">
                 <select class="form-control" id="shoppingPreference" required>
                     <option value="" disabled selected>Choose...</option>
@@ -51,28 +55,31 @@
                 </select>
                 <label for="shoppingPreference">Shopping Preference</label>
             </div>
+            <!-- Date of Birth input -->
             <div class="form-floating mb-4">
                 <input type="date" class="form-control" id="dob" placeholder="Date of Birth" min="1900-01-01" required>
                 <label for="dob">Date of Birth</label>
             </div>
+            <!-- Opt-in for email updates -->
             <div class="form-check mb-4">
                 <input class="form-check-input" type="checkbox" id="emailUpdates" required>
                 <label class="form-check-label" for="emailUpdates">
                     Sign up for emails to get updates from Sneakerverse on products, offers and your Member benefits.
                 </label>
             </div>
+            <!-- Privacy policy agreement -->
             <div class="form-check mb-4">
                 <input class="form-check-input" type="checkbox" id="privacyPolicy" required>
                 <label class="form-check-label" for="privacyPolicy">
                     I agree to Sneakersverse's Privacy Policy and Terms of Use.
                 </label>
             </div>
+            <!-- Submission button -->
             <button type="submit" class="btn btn-primary submit-btn" formaction="../../public/index.html"><strong>Create Account</strong></button>
-
         </form>
     </div>
-
+    <!-- Including Bootstrap JavaScript for interactive components -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="../js/reg-log-script.js"></script>
+    <script src="../js/reg-log-script.js"></script> <!-- Link to custom JavaScript -->
 </body>
 </html>
