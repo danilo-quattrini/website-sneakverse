@@ -47,7 +47,13 @@ function showProducts() {
     }
 
     function goToProduct() {
+        const productName = encodeURIComponent(document.querySelector('.modal-content h3').textContent);
+        const productPrice = encodeURIComponent(document.querySelector('.modal-content p').textContent);
+        const productImage = encodeURIComponent(document.querySelector('.modal-logo').src.split('/').pop());
+        const productBrand = encodeURIComponent(document.querySelector('.modal-content').dataset.brand);
+        const productType = encodeURIComponent(document.querySelector('.modal-content').dataset.type);
 
+        window.location.href = `/src/pages/prodoucts-view.html?name=${productName}&price=${productPrice}&image=${productImage}&brand=${productBrand}&type=${productType}`;
     }
 
     document.querySelectorAll('.products-card').forEach(card => {
