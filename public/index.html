@@ -10,44 +10,29 @@
     <link rel="stylesheet" href="../src/styles/layout.css">
     <!--StyleSheet document for the navbar component-->
     <link rel="stylesheet" href="../src/styles/components/navbar.css">
-    <!--StyleSheet document for the footer component-->
-    <link rel="stylesheet" href="../src/styles/components/footer.css">
+</head>
+<body>
+    <header>
+        <img src="assets/img/logo1.png" alt="Logo of the website" class="logo">
+        <nav>
+            <ul>
+                <li> <a href="#bestSellers">Best Sellers</a></li>
+                <li><a href="#offers">Offers</a></li>
+                <li><a href="#news">New arrivals</a></li>
 
-    <!--This is the link for the bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!--This is the icon of the page-->
-    <link rel="apple-touch-icon" sizes="180x180" href="/public/assets/icon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/public/assets/icon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/public/assets/icon/favicon-16x16.png">
-    <link rel="manifest" href="/public/assets/icon/site.webmanifest">
-    <link rel="shortcut icon" href="/public/assets/icon/favicon.ico" type="image/x-icon">
-  </head>
-  <body>
-  <header>
-    <img src="/public/assets/img/logo1.png" alt="Logo of the website" class="logo">
-    <nav>
-      <ul>
-        <li><a href="#news">News</a></li>
-        <li>
-          <a href="#popular">More Popular</a>
-          <ul class="submenu">
-            <li><a href="#nike">Nike</a></li>
-            <li><a href="#adidas">Adidas</a></li>
-            <li><a href="#newbalance">New Balance</a></li>
-            <li><a href="#puma">Puma</a></li>
-            <li><a href="#converse">Converse</a></li>
-          </ul>
-        </li>
-        <li><a href="#sales">Sales</a></li>
-      </ul>
-    </nav>
+            </ul>
 
-    <!-- Profile Section -->
-    <div class="profile">
-      <img src="/public/assets/img/profile2.png" alt="Profile Picture" class="profile-image">
-      <span class="profile-name">Rick Sanchez</span>
-    </div>
-  </header>
+            <ul>
+                <li><a href="../src/pages/blackFriday.html" class="black-friday">Black Friday</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="assets/img/profile2.png" alt="Profile Picture" class="profile-image">
+            <span class="profile-name">Rick Sanchez</span>
+        </div>
+    </header>
 
   <!-- Background Video Section -->
   <section class="video-section">
@@ -82,14 +67,14 @@
 
 
   <!-- Banners for Best Sellers, Offers, New Arrivals -->
-  <section class="banner">
+  <section id="bestSellers" class="banner">
     <h2>Best Sellers</h2>
   </section>
   <section id="popular-products" class="products">
     <!-- Best-selling products generated dynamically with JavaScript -->
   </section>
 
-  <section class="banner">
+  <section id="offers" class="banner">
     <h2>Offers</h2>
   </section>
 
@@ -97,25 +82,32 @@
     <!-- Products on offer generated dynamically with JavaScript -->
   </section>
 
-  <section class="banner">
+  <section id="news" class="banner">
     <h2>New Arrivals</h2>
   </section>
   <section id="new-products" class="products">
     <!-- New products generated dynamically with JavaScript -->
   </section>
 
-  <!-- Modal -->
-  <div id="shoeModal" class="modal">
+    <!--Script for generate products dynamically-->
+    <script src="../src/js/scripts.js"></script>
+
+<!-- Modal -->
+<div id="shoeModal" class="modal">
     <div class="modal-content">
-      <span class="close" onclick="closeModal()">&times;</span>
-      <img src="assets/img/logo1.png" alt="Logo" class="modal-logo">
-      <video controls class="modal-video">
-        <source src="assets/vid/shoevideo1.mp4" type="video/mp4">
-        Your browser does not support HTML5 videos.
-      </video>
-      <button class="modal-button" onclick="goToProduct()">GO CHECK THEM!</button>
+        <a href="index.html" class="modal-logo-link">
+            <img src="assets/img/logo1.png" alt="Logo" class="modal-logo">
+        </a>
+        <p class="return-message">Click the logo to return to the homepage</p>
+        <h3></h3> <!-- Para mostrar el nombre del producto -->
+        <p></p> <!-- Para mostrar el precio del producto -->
+        <video controls class="modal-video">
+            <source src="" type="video/mp4"> <!-- La fuente se actualizará dinámicamente -->
+            Your browser does not support HTML5 videos.
+        </video>
+        <button class="modal-button" onclick="goToProduct()">GO CHECK THEM!</button>
     </div>
-  </div>
+</div>
 
   <!-- Footer Section -->
   <footer>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../styles/cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!--This one is the layout for all the pages inside the project-->
+    <link rel="stylesheet" href="../styles/layout.css">
+    <!--StyleSheet document for the navbar component-->
+    <link rel="stylesheet" href="../styles/components/navbar.css">
+</head>
+<body>
+    <header>
+        <img src="../../public/assets/img/logo1.png" alt="Logo of the website" class="logo">
+        <nav>
+            <ul>     
+                <img src="../../public/assets/img/cart.jpg"  alt="Logo of the shopping cart" class="cart">          
+            </ul>
+            <ul>
+               Shopping Cart
+            </ul>
+        </nav>
+        
+        <!-- Profile Section -->
+        <div class="profile">
+            <img src="../../public/assets/img/profile2.png" alt="Profile Picture" class="profile-image">
+            <span class="profile-name">Rick Sanchez</span>
+        </div>
+    </header>
+    <section class="lineBlack">
+    </section>
+    <section class="brand">
+        <div class="brand-img">
+            <img src="../../public/assets/img/nike.webp" alt="Nike">
+        </div>
+        <div class="brand-img">
+            <img src="../../public/assets/img/adidas.webp" alt="Adidas">
+        </div>
+        <div class="brand-img">
+            <img src="../../public/assets/img/newbalance.webp" alt="New Balance">
+        </div>
+        <div class="brand-img">
+            <img src="../../public/assets/img/puma.webp" alt="Puma">
+        </div>
+        <div class="brand-img">
+            <img src="../../public/assets/img/converse.webp" alt="Converse">
+        </div>
+    </section>
+    <section class="lineBlack">
+    </section>
+    <main>
+        <div class="cart-container">
+            <!-- List of products -->
+            <div class="cart-items">
+                <!-- Example product item -->
+                <div class="cart-item">
+                    <img src="../../public/assets/img/ariForce1.webp" alt="Product Image" class="product-image">
+                    <div class="item-details">
+                        <h3>Streetwear Shoes</h3>
+                        <p>Price: $99,99</p>
+                        <div class="quantity-control">
+                            <span class="quantity">1 unit</span>
+                        </div>
+        
+                    </div>
+                </div>
+                <!-- Additional products can be dynamically added here -->
+            </div>
+            <!-- Summary section -->
+            <div class="cart-summary">
+                <h2>Order Summary</h2>
+                <p>Total Items: <span id="total-items">1</span></p>
+                <p>Total Price: $<span id="total-price">99,99</span></p>
+            </div>
+        </div>
+        
+    </main>
+
+    <footer>
+        <iframe src="../components/footer.html" style="width: 100%; height: auto; border: none;" scrolling="no"></iframe>
+    </footer>
+</body>
+</html>
