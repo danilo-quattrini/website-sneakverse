@@ -106,30 +106,4 @@ function animateImageSlide(mainImage, newImageSrc, direction) {
         }, 50);
     }, 500);
 }
-
-// Function to navigate to the next or previous image with the buttons
-function navigateMainImage(direction) {
-    const activeThumbnail = document.querySelector('.thumbnail.active-thumbnail');
-    const thumbnails = Array.from(document.querySelectorAll('.thumbnail'));
-    const activeIndex = thumbnails.indexOf(activeThumbnail);
-    let newIndex;
-
-    if (direction === 'left') {
-        newIndex = activeIndex === 0 ? thumbnails.length - 1 : activeIndex - 1; // Loop to last image
-    } else if (direction === 'right') {
-        newIndex = activeIndex === thumbnails.length - 1 ? 0 : activeIndex + 1; // Loop to first image
-    }
-
-    const newThumbnail = thumbnails[newIndex];
-    const newImageSrc = newThumbnail.dataset.image;
-
-    changeMainImage(newImageSrc, newThumbnail);
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    updateProductDetails();
-    // Add event listeners for navigation buttons
-    document.querySelector('.prev-btn').addEventListener('click', () => navigateMainImage('left'));
-    document.querySelector('.next-btn').addEventListener('click', () => navigateMainImage('right'));
-
-});
+document.addEventListener('DOMContentLoaded', updateProductDetails);

@@ -1,0 +1,55 @@
+/*Logo of the website*/
+.logo {
+    width: 120px;
+}
+
+/*navbar of the webpage*/
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+/* Menú desplegable */
+nav li {
+    position: relative;
+}
+
+nav .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    list-style: none;
+    padding: 0.5rem 0;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav li:hover .submenu {
+    display: block;
+}
+
+nav .submenu li {
+    padding: 0.5rem 1rem;
+}
+
+nav .submenu a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav .submenu a:hover {
+    color: #555;
+}

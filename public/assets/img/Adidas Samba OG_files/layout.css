@@ -1,0 +1,26 @@
+/* Global layout styles (grid, flex, etc.) for the order of displayin stuff inside the webpage */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;  /* Asegura que toda la página tenga altura completa */
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    overflow-y: auto; /* Permite el desplazamiento vertical en toda la página */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+}
