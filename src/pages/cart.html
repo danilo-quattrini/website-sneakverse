@@ -33,19 +33,19 @@
     </section>
     <section class="brand">
         <div class="brand-img">
-            <img src="../../public/assets/img/nike.webp" alt="Nike">
+            <img src="../../public/assets/img/logos/nike.webp" alt="Nike">
         </div>
         <div class="brand-img">
-            <img src="../../public/assets/img/adidas.webp" alt="Adidas">
+            <img src="../../public/assets/img/logos/adidas.webp" alt="Adidas">
         </div>
         <div class="brand-img">
-            <img src="../../public/assets/img/newbalance.webp" alt="New Balance">
+            <img src="../../public/assets/img/logos/newbalance.webp" alt="New Balance">
         </div>
         <div class="brand-img">
-            <img src="../../public/assets/img/puma.webp" alt="Puma">
+            <img src="../../public/assets/img/logos/puma.webp" alt="Puma">
         </div>
         <div class="brand-img">
-            <img src="../../public/assets/img/converse.webp" alt="Converse">
+            <img src="../../public/assets/img/logos/converse.webp" alt="Converse">
         </div>
     </section>
     <section class="lineBlack">
@@ -56,14 +56,14 @@
             <div class="cart-items">
                 <!-- Example product item -->
                 <div class="cart-item">
-                    <img src="../../public/assets/img/ariForce1.webp" alt="Product Image" class="product-image">
+                    <img src="" alt="Product Image" class="product-image" id="cartImage">
                     <div class="item-details">
-                        <h3>Streetwear Shoes</h3>
-                        <p>Price: €99,99</p>
+                        <h3 class="product-name" id="cartName">Streetwear Shoes</h3>
+                        <p class="product-price">Price:</p> <p id="cartPrice"></p>
                         <div class="quantity-control">
                             <span class="quantity">1 unit</span>
                         </div>
-        
+
                     </div>
                 </div>
                 <!-- Additional products can be dynamically added here -->
@@ -90,6 +90,22 @@
             alert('Thank you for your purchase!');
             
         });
+        document.addEventListener('DOMContentLoaded', function () {
+            // Retrieve values from localStorage
+            const cartImage = localStorage.getItem('cartImage');
+            const cartName = localStorage.getItem('cartName');
+            const cartPrice = localStorage.getItem('cartPrice');
+
+            // Check if the values exist before updating the DOM
+            if (cartImage && cartName && cartPrice) {
+                document.getElementById('cartImage').src = cartImage;
+                document.getElementById('cartName').textContent = cartName;
+                document.getElementById('cartPrice').textContent = cartPrice;
+            } else {
+                console.error("Cart data not found in localStorage.");
+            }
+        });
     </script>
+
 </body>
 </html>
