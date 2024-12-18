@@ -6,17 +6,29 @@ function getQueryParams() {
         price: params.get('price'),
         image: params.get('image'),
         brand: params.get('brand'),
-        type: params.get('type')
+        type: params.get('type'),
+        oldPrice: params.get('oldPrice')
     };
 }
 
 function updateProductDetails() {
-    const { name, price, image, brand, type } = getQueryParams();
+    const { name, price, image, brand, type, oldPrice } = getQueryParams();
 
     // If all parameters are provided, update the page content
     if (name && price && image && brand) {
         document.querySelector('.product-name').textContent = name;
-        document.querySelector('.product-price').textContent = price;
+
+        // Check if oldPrice exists to show discounted price
+        const priceElement = document.querySelector('.product-price');
+        if (oldPrice) {
+            priceElement.innerHTML = `
+                <span class="old-price">${oldPrice}</span>
+                <span class="new-price">${price}</span>
+            `;
+        } else {
+            priceElement.textContent = price;
+        }
+
         // Set the product name as the page title
         document.title = name;
         // Set main product image based on brand and image name
