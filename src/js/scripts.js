@@ -19,7 +19,7 @@ function showProducts() {
     products.forEach(product => {
         const card = `
             <div class="products-card" data-video="${product.video}" data-brand="${product.brand}" data-type="${product.type}">
-                <img src="assets/img/${product.image}" alt="${product.name}" class="products-images">
+                <img src="../public/assets/img/${product.image}" alt="${product.name}" class="products-images">
                 <h3>${product.name}</h3>
                 <p>${product.price}</p>
             </div>
@@ -41,7 +41,7 @@ function showProducts() {
         const videoElement = document.querySelector('.modal-video'); // The video tag
 
         // Set the new video source
-        modalVideo.src = `/public/assets/img/${videoSource}`;
+        modalVideo.src = `../public/assets/img/${videoSource}`;
         videoElement.load(); // Reload the video with the new source
 
         // Display the modal
@@ -63,7 +63,7 @@ function showProducts() {
         modal.setAttribute('data-type', productType);
     }
     
-    function goToProduct(event) {
+    function goToProduct() {
         const modal = document.getElementById("shoeModal");
         const productName = modal.getAttribute('data-name');
         const productPrice = modal.getAttribute('data-price');
@@ -72,7 +72,8 @@ function showProducts() {
         const productType = modal.getAttribute('data-type');
 
         // Redirect to the product view page with query parameters
-        window.location.href = `/src/pages/products-view.html?name=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&image=${encodeURIComponent(productImage)}&brand=${encodeURIComponent(productBrand)}&type=${encodeURIComponent(productType)}`;
+        window.location.href = `../src/pages/products-view.html?name=${encodeURIComponent(productName)}&price=${encodeURIComponent(productPrice)}&image=${encodeURIComponent(productImage)}&brand=${encodeURIComponent(productBrand)}&type=${encodeURIComponent(productType)}`;
+
     }
 
     document.querySelectorAll('.products-card').forEach(card => {
