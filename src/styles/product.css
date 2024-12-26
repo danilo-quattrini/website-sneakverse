@@ -91,17 +91,20 @@
   object-fit: cover;
   cursor: pointer;
   border: 1px solid transparent;
+  border-radius: 5px;
   transition: border 0.3s ease;
 }
 
 /* Hover effect for the thumbnail */
 .thumbnail:hover {
   border: 1px solid #333; /* Black border for the hovered thumbnail */
+  border-radius: 5px;
   transform: scale(1.05);
   transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1), border-color 0.5s cubic-bezier(0.25, 1, 0.5, 1);
 }
 /* Selected thumbnail retains the border */
 .active-thumbnail {
+  border-radius: 5px;
   border-bottom: 3px solid #333; /* Black border for the selected thumbnail */
 }
 
@@ -201,7 +204,7 @@ a.link-for-size svg {
   border: none;
   color: white;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
@@ -217,7 +220,7 @@ a.link-for-size svg {
   border: 1px solid darkgray;
   color: black;
   cursor: pointer;
-  border-radius: 30px;
+  border-radius: 5px;
   transition: background-color 0.3s ease;
 }
 
