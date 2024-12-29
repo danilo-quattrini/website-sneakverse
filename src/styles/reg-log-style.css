@@ -1,0 +1,94 @@
+body {
+    font-family: Arial, sans-serif;
+    /* Defines a clean, sans-serif font for the entire page */
+}
+
+.container {
+    max-width: 600px;
+    /* Restricts the width of the container to make it more compact */
+}
+
+.row {
+    display: flex;
+    /* Uses flexbox for layout of elements in a row */
+}
+
+.password-info {
+    font-size: 0.9em;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    /* Styles for password requirements text */
+}
+
+.password-info div {
+    display: flex;
+    align-items: center;
+    /* Ensures content is aligned vertically */
+}
+
+.password-info svg {
+    margin-right: 8px;
+    color: rgb(0, 0, 0);
+    /* Adds space between icon and text, and sets icon color */
+}
+
+.password-info div svg + span {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    /* Ensures proper alignment and spacing for text next to icons */
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    /* Styles checkbox sections for better alignment */
+}
+
+.form-check-label {
+    margin-left: 5px;
+    /* Adds space between checkbox and its label */
+}
+
+.mb-4 {
+    margin-bottom: 2.5rem !important;
+    /* Defines consistent spacing for bottom margin */
+}
+
+/* Final adjustments for label positioning and color */
+.form-floating>.form-control:focus~label,
+.form-floating>.form-control:not(:placeholder-shown)~label {
+    transform: scale(.85) translateY(-1.7rem) translateX(0.75rem);
+    /* Adjusts label position when the input is focused or filled */
+    color: #000; /* Sets label color to black */
+}
+
+.form-floating>.form-control:focus~label {
+    opacity: .65;
+    /* Makes the label slightly transparent on focus */
+}
+
+.submit-btn {
+    background-color: black;
+    border: none;
+    border-radius: 50px;
+    float: right;
+    padding: 10px 20px;
+    color: white;
+    /* Styles the submit button with a modern appearance */
+}
+
+/* Input box styles */
+.form-control {
+    border: 1px solid #ccc;
+    /* Adds a subtle gray border */
+    box-shadow: none;
+    /* Removes default shadows */
+}
+
+.form-control:focus {
+    border-color: #666;
+    /* Changes border color on focus for emphasis */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    /* Adds a faint shadow around the input box on focus */
+}
