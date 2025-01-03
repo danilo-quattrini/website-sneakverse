@@ -1,54 +1,70 @@
-// Add an event listener to the form submission
-document.getElementById("myForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Prevent the default form submission behavior
+// Corrected and improved script for form validation
 
-    // Get the values from the form inputs
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const dob = document.getElementById("dob").value;
-    const dobDate = new Date(dob);
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("myForm");
 
-    const minDate = new Date("1900-01-01"); // Minimum allowed date of birth
+    form.addEventListener("submit", (event) => {
+        event.preventDefault(); // Prevent the default form submission behavior
 
-    // Validate email format
-    if (!email.includes("@")) {
-        alert("Please enter a valid email.");
-    } 
-    // Validate password length
-    else if (password.length < 8 || password.length > 12) {
-        alert("Password must be between 8 and 12 characters.");
-    } 
-    // Validate date of birth range
-    else if (dobDate < minDate) {
-        alert("Please enter a valid date of birth.");
-    } 
-    // Success message if all validations pass
-    else {
-        alert("Form submitted successfully!");
-    }
-});
+        // Get the values from the form inputs
+        const email = document.getElementById("email").value.trim();
+        const password = document.getElementById("password").value;
+        const dob = document.getElementById("dob").value;
+        const dobDate = new Date(dob);
 
-// Add event listeners to all input fields for validation feedback
-document.querySelectorAll('.form-control').forEach(input => {
-    input.addEventListener('blur', function() {
-        if (!this.value) { // If the input is empty
-            this.classList.add('is-invalid'); // Add invalid class for styling
-        } else {
-            this.classList.remove('is-invalid'); // Remove invalid class if input is valid
+        const minDate = new Date("1900-01-01"); // Minimum allowed date of birth
+        const currentDate = new Date();
+
+        // Validate email format
+        if (!validateEmail(email)) {
+            alert("Please enter a valid email address.");
+            return;
         }
+
+        // Validate password complexity
+        if (!validatePassword(password)) {
+            alert("Password must be between 8 and 12 characters, include at least one uppercase letter, one lowercase letter, and one number.");
+            return;
+        }
+
+        // Validate date of birth range
+        if (isNaN(dobDate.getTime()) || dobDate < minDate || dobDate > currentDate) {
+            alert("Please enter a valid date of birth.");
+            return;
+        }
+
+        // If all validations pass
+        alert("Form submitted successfully!");
+        // Redirect to the specified URL
+        window.location.href = '../../public/index.html';
     });
-});
 
-// Add another event listener for form submission with built-in validation
-document.getElementById('myForm').addEventListener('submit', function(event) { 
-    event.preventDefault(); // Prevent default behavior
+    // Add input validation feedback
+    document.querySelectorAll('.form-control').forEach(input => {
+        input.addEventListener('blur', function() {
+            if (!this.value.trim()) { // If the input is empty
+                this.classList.add('is-invalid'); // Add invalid class for styling
+            } else {
+                this.classList.remove('is-invalid'); // Remove invalid class if input is valid
+            }
+        });
+    });
 
-    const formValid = this.checkValidity(); // Check form validity
+    // Helper function to validate email
+    function validateEmail(email) {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return emailRegex.test(email);
+    }
 
-    // If the form is valid, redirect to the specified URL
-    if (formValid) { 
-        window.location.href = '../../public/index.html'; 
-    } else { 
-        alert('Please fill out all fields correctly.'); // Alert the user if form is invalid
-    } 
+    // Helper function to validate password
+    function validatePassword(password) {
+        const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,12}$/;
+        return passwordRegex.test(password);
+    }
+
+    // Ensure optional checkbox is not enforced
+    const optionalCheckbox = document.getElementById('emailUpdates');
+    if (optionalCheckbox) {
+        optionalCheckbox.required = false; // Explicitly set to optional
+    }
 });
