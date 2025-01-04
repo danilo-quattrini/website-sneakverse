@@ -68,3 +68,32 @@ document.addEventListener("DOMContentLoaded", () => {
         optionalCheckbox.required = false; // Explicitly set to optional
     }
 });
+
+// Function to validate that input contains only letters and numbers
+function validateAlphanumeric(input) {
+    const regex = /^[a-zA-Z0-9]*$/;
+    return regex.test(input);
+}
+
+// Adding validation to first name and last name inputs
+document.getElementById("firstName").addEventListener("input", function () {
+    if (!validateAlphanumeric(this.value)) {
+        alert("Invalid character! Only letters and numbers are allowed.");
+        this.value = this.value.slice(0, -1); // Remove the last invalid character
+    }
+});
+
+document.getElementById("lastName").addEventListener("input", function () {
+    if (!validateAlphanumeric(this.value)) {
+        alert("Invalid character! Only letters and numbers are allowed.");
+        this.value = this.value.slice(0, -1); // Remove the last invalid character
+    }
+});
+
+// Adding validation to password input to ensure only alphanumeric characters are allowed
+document.getElementById("password").addEventListener("input", function () {
+    if (!validateAlphanumeric(this.value)) {
+        alert("Invalid character in password! Only letters and numbers are allowed.");
+        this.value = this.value.slice(0, -1); // Remove the last invalid character
+    }
+});
