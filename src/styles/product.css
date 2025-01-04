@@ -20,6 +20,7 @@
   border: none;
   width: 50px;
   height: 50px;
+  margin: 10px;
   cursor: pointer;
   z-index: 10;
   display: flex;
@@ -27,16 +28,27 @@
   justify-content: center;
   background-color: white;
 }
-.prev-btn {
-  left: -60px;
-  transform: translateY(-50%);
+
+
+.prev-btn img, .next-btn img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
 }
 
-.next-btn {
-  right: -60px;
-  transform: translateY(-50%);
+/* Hover effect */
+.prev-btn:hover, .next-btn:hover {
+  transform: scale(1.2); /* Enlarge the button */
 }
 
+.prev-btn:hover img, .next-btn:hover img {
+  transform: scale(1.3); /* Enlarge the arrow icon */
+}
+
+/* Active effect (when clicked) */
+.prev-btn:active, .next-btn:active {
+  transform: scale(1.1); /* Slightly shrink on click */
+}
 
 
 /*This is the style for the image container*/
@@ -236,7 +248,7 @@ a.link-for-size svg {
   border-top: 1px solid #ddd;
   padding-top: 10px;
   margin-top: 10px;
-}
+}w
 
 .review-section h3 {
   font-size: 18px;
