@@ -105,3 +105,13 @@ document.getElementById("password").addEventListener("input", function () {
         this.value = this.value.slice(0, -1);
     }
 });
+
+document.getElementById("myForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Assuming login validation is successful
+    localStorage.setItem("isRegistered", "true"); // Store login status in local storage
+
+    // Redirect to the index page
+    window.location.href = "/public/index.html";
+});

@@ -53,3 +53,17 @@ nav .submenu a {
 nav .submenu a:hover {
     color: #555;
 }
+
+/*Style for the icons*/
+
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons i {
+    font-size: 18px;
+    margin-left: 10px;
+    color: #000;
+}
+

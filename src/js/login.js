@@ -19,3 +19,15 @@ document.getElementById("loginForm").addEventListener("submit", function(event) 
         alert("Login successful!");
     }
 });
+
+
+document.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Assuming login validation is successful
+    localStorage.setItem("isLoggedIn", "true"); // Store login status in local storage
+
+    // Redirect to the index page
+    window.location.href = "/public/index.html";
+});
+
