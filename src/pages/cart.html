@@ -13,17 +13,12 @@
 </head>
 <body>
     <header>
-        <img src="../../public/assets/img/logo1.png" alt="Logo of the website" class="logo">
+        <a href="/public/index.html" target="_parent">
+            <img src="../../public/assets/img/logo1.png" alt="Logo of the website" class="logo">
+        </a>
         <nav>
             <ul>     
                 <img src="../../public/assets/img/cart.jpg"  alt="Logo of the shopping cart" class="cart">          
-            </ul>
-            <ul style="margin-bottom: 20px;">
-                Shopping Cart
-            </ul>
-
-            <ul>
-                <li><a href="../../public/index.html" class="return-link">Return to the main page</a></li>
             </ul>
         </nav>
         
@@ -76,7 +71,7 @@
             <div class="cart-summary">
                 <h2>Order Summary</h2>
                 <p>Total Items: <span id="total-items">1</span></p>
-                <p>Total Price: €<span id="total-price">99,99</span></p>
+                <p>Total Price: <span id="total-price"></span></p>
             </div>
         </div>
            <!-- Buy Now Button -->
@@ -105,8 +100,11 @@
                 document.getElementById('cartImage').src = cartImage;
                 document.getElementById('cartName').textContent = cartName;
                 document.getElementById('cartPrice').textContent = cartPrice;
+                document.getElementById('total-price').textContent = cartPrice;
             } else {
-                console.error("Cart data not found in localStorage.");
+                document.querySelector('.cart-items').innerHTML = '<p>Your cart is empty.</p>';
+                document.querySelector('.cart-summary').style.display = 'none';
+                document.querySelector('.buy-now-container').style.display = 'none';
             }
         });
     </script>

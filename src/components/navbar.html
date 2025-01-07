@@ -1,10 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--StyleSheet document for the navbar component-->
+    <link rel="stylesheet" href="/src/styles/components/navbar.css">
+    <!--This one is the layout for all the pages inside the project-->
+    <link rel="stylesheet" href="/src/styles/layout.css">
+    <!--StyleSheet document for the index page-->
+    <link rel="stylesheet" href="/src/styles/styles.css">
+    <!--StyleSheet document for the footer component-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>header</title>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header>
+      <a href="/public/index.html" target="_parent">
+        <img src="/public/assets/img/logo1.png" alt="Logo of the website" class="logo">
+      </a>
+      <nav>
+        <ul>
+          <li> <a href="#bestSellers">Best Sellers</a></li>
+          <li><a href="#offers">Offers</a></li>
+          <li><a href="#news">New arrivals</a></li>
+
+        </ul>
+
+        <ul>
+          <li><a href="/src/pages/blackFriday.html" class="black-friday" target="_parent">Black Friday</a></li>
+        </ul>
+      </nav>
+
+      <!-- Profile Section -->
+      <div class="profile">
+        <div class="right-section">
+          <a href="/src/pages/login.html" target="_parent">Join Us</a>
+          <a href="/src/pages/register.html" target="_parent">Sign In</a>
+          <div class="icons">
+            <i class="fas fa-search"></i>
+            <i class="fas fa-heart"></i>
+            <a href="/src/pages/login.html" target="_parent"><i class="fas fa-shopping-bag"></i></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!--Script for the profile section-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const isLoggedIn = localStorage.getItem("isLoggedIn"); // Check login status
+            const isRegistered = localStorage.getItem("isRegistered"); // Check registration status
+            const profileSection = document.querySelector(".profile .right-section");
+
+            if (isLoggedIn === "true" || isRegistered === "true") {
+                // Replace "Join Us" and "Sign In" with the profile section
+                profileSection.innerHTML = `
+              <img src="/public/assets/img/profile2.png" alt="Profile Picture" class="profile-image">
+              <a class="profile-name">Rick Sanchez</a>
+              <div class="icons">
+                  <i class="fas fa-search"></i>
+                  <i class="fas fa-heart"></i>
+                  <a href="/src/pages/cart.html" target="_parent"><i class="fas fa-shopping-bag"></i></a>
+              </div>
+          `;
+            }
+        });
+    </script>
+  </body>
 </html>

@@ -35,13 +35,12 @@ footer {
 .footer-nav ul li a:hover {
     color: #ff6600;
   }
-  
 .footer-social a {
     color: #f2f2f2;
-    margin: 0 5px;
+    margin: 0 12px;
     text-decoration: none;
+
   }
-  
 .footer-social a:hover {
     color: #ff6600;
   }

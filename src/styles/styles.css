@@ -64,8 +64,8 @@
 
 /* Banners */
 .banner {
-    background-color: #000;
-    color: #fff;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
     padding: 0.5rem 0;
     text-align: center;
     margin-top: 2rem;
@@ -104,17 +104,12 @@
     align-items: center; /* Centrar verticalmente */
 }
 
-.profile-image {
-    width: 50px; /* Ancho de la imagen de perfil */
-    height: 50px; /* Alto de la imagen de perfil */
-    border-radius: 50%; /* Hacer la imagen circular */
-    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
-    margin-right: 10px; /* Espacio entre la imagen y el nombre */
-}
-
-.profile {
-    display: flex; /* Usar flexbox para alinear elementos */
-    align-items: center; /* Centrar verticalmente */
+/*Link for the profile*/
+.profile a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 15px;
+    font-size: 14px;
 }
 
 .profile-image {
@@ -130,8 +125,18 @@
     color: #333; /* Color del texto */
 }
 
+.right-section {
+    display: flex;
+    align-items: center;
+}
 
-/* Estilos del Modal */
+.right-section a {
+    text-decoration: none;
+    color: #000;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
 /* Estilos del Modal */
 .modal {
     display: none; /* Ocultar el modal por defecto */
@@ -178,6 +183,7 @@
     transition: background-color 0.3s;
     font-size: 1rem;
     margin-top: 10px;
+    border-radius: 10px;
 }
 
 .modal-button:hover {

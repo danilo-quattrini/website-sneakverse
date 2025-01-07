@@ -8,43 +8,45 @@
     <link rel="stylesheet" href="/src/styles/styles.css">
     <!--This one is the layout for all the pages inside the project-->
     <link rel="stylesheet" href="/src/styles/layout.css">
-    <!--StyleSheet document for the navbar component-->
-    <link rel="stylesheet" href="/src/styles/components/navbar.css">
+
 </head>
 <body>
-    <header>
-        <img src="assets/img/logo1.png" alt="Logo of the website" class="logo">
-        <nav>
-            <ul>
-                <li> <a href="#bestSellers">Best Sellers</a></li>
-                <li><a href="#offers">Offers</a></li>
-                <li><a href="#news">New arrivals</a></li>
-         
-            </ul>
-            
-            <ul>
-                <li><a href="../src/pages/blackFriday.html" class="black-friday">Black Friday</a></li>
-            </ul>
-        </nav>
-        
-        <!-- Profile Section -->
-        <div class="profile">
-            <img src="assets/img/profile2.png" alt="Profile Picture" class="profile-image">
-            <a href="../src/pages/cart.html" class="profile-name">Rick Sanchez</a>
-        </div>
-    </header>
+    <!-- Navbar Section -->
+    <iframe src="/src/components/navbar.html" style="width: 100%; height: auto; border: none;" scrolling="no"></iframe>
 
     <!-- Background Video Section -->
     <section class="video-section">
-        <video autoplay muted loop class="background-video">
-            <source src="assets/vid/video1.mp4" type="video/mp4">
-            Your browser does not support HTML5 videos.
-        </video>
+        <div id="player" class="background-video"></div>
         <div class="video-overlay">
             <h1>Explore the Best Streetwear Sneakers</h1>
             <button onclick="scrollToProducts()">View Products</button>
         </div>
     </section>
+
+    <script>
+        // YouTube API Player Script
+        function onYouTubeIframeAPIReady() {
+            new YT.Player('player', {
+                videoId: 'b8PUpLsGSN8', // ID of the video
+                playerVars: {
+                    autoplay: 1,
+                    mute: 1,
+                    loop: 1,
+                    playlist: 'b8PUpLsGSN8',
+                    controls: 0,
+                    showinfo: 0,
+                    modestbranding: 1,
+                    rel: 0
+                }
+            });
+        }
+
+        // API for the YouTube Player
+        const tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    </script>
 
     <!-- Brand Images -->
     <section class="brand">
@@ -97,18 +99,16 @@
         <p class="return-message">Click the logo to return to the homepage</p>
         <h3></h3> <!-- Show product name -->
         <p></p> <!-- Para mostrar el precio del producto -->
-        <video controls class="modal-video">
+        <video autoplay loop class="modal-video">
             <source src="" type="video/mp4"> <!-- La fuente se actualizará dinámicamente -->
             Your browser does not support HTML5 videos.
         </video>
-        <button class="modal-button">GO CHECK THEM!</button>
+        <button class="modal-button">CHECK THEM!</button>
     </div>
 </div>
     <!-- Footer Section -->
-    <footer>
         <iframe src="../src/components/footer.html" style="width: 100%; height: auto; border: none;"
                 scrolling="no"></iframe>
-    </footer>
     <!--Script for generate products dynamically-->
     <script src="../src/js/scripts.js"></script>
 
